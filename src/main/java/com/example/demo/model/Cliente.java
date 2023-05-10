@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.Entity; 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ public class Cliente {
 	@GeneratedValue
 	private long cod_cliente;
 	private String nombre;
-	private int dni;
-	private int telefono;
+	private String dni;
+	private String telefono;
 
 }
