@@ -270,8 +270,3 @@ h2 {
 #pasw{
 	width: 15%;
 }
-
-input[type="text"],
-input[type="email"] {
-	width: 100%;
-}
