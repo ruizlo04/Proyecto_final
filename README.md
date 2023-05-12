@@ -4,3 +4,4 @@
 ### Para acceder debe utilizar: Usuario = admin, contraseña = admin.
 ### Tambien puede acceder con: Usuario = user, contraseña = 1234.
 ### Sé que debo trabajar con las ramas y hacer pull request, lo empezaré a trabajar este fin de semana.
+### La carpeta 'catering' no es necesaria en este proyecto, la ulicé de prueba y olvidé quitarla.
