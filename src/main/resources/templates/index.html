@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>Ejemplo de un CRUD completo</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" th:href="@{/css/estilos.css}" />
 </head>
+
 <body>
-<div id="menu">
-	<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo cliente</a>
-</div>
-<br /><br />
-<table border=1>
-	<thead>
-		<tr>
-			<th>Id</th>
-			<th>Nombre</th>
-			<th>Dni</th>
-			<th>telefono</th>
-			<th>Operaciones</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr th:each="Cliente : ${lista}">
-			<td th:text="${cliente.cod_cliente}">1</td>
-			<td th:text="${cliente.nombre}">Nombre</td>
-			<td th:text="${cliente.dni}">Dni</td>
-			<td th:text="${cliente.telefono}">Telefono</td>
-			
-<!-- Estamos "montando las rutas" que aparecen como enlaces (editar y borrar) 
-en la tabla de alumnos ya que estas cambian al pinchar en 
-un alumno en concreto recogiendo el id de dicho alumno 
-y así poder acceder a su información. Para ello:
+	<form th:action="@{/logout}" method="POST" id="logoutForm"></form>
+	<h1>
+		Bienvenido, administrador: <span sec:authentication="name">Usuario</span>
+	</h1>
+	<header>
+		<nav class="navbar navbar-expand-sm ">
+			<div class="container-fluid">
+				<img class="navbar-brand" href="javascript:void(0)" src="/img/logo.png" alt="Logo empresa" width="5%">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mynavbar">
+					<ul class="navbar-nav m-0">
+						<li class="nav-item">
+							<b><a class="nav-link" th:href="@{/admin/}">Administrar</a></b>
+						</li>
+						<li class="nav-item">
+							<b><a class="nav-link" href="portada.html">Inicio</a></b>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="eventos.html">Eventos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="bodas.html">Bodas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contacto.html">Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>>
+	<a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+	<div id="menu">
+		<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo cliente</a>
+	</div>
 
-* Usamos como siempre en th @{ }
-* La primera parte (la parte que no varía podríamos decir) es igual a las vistas de otras ocasiones, 
-por ejemplo, th:href="@{/editar/más si hubiera otras"
-* Después agregamos las llaves con id para que sea reconocido 
-como un parámetro o parte de la ruta "que va a cambiar"
-* Dentro de paréntesis, asignamos un valor a dicho id, 
-en este caso como es el atributo de la entidad, usamos la forma normal de th
-para el uso de variables, es decir, símbolo de dólar y el nombre del objeto.nombreatributo, 
-quedando como puede verse en el código
-* Con esto, tendremos el id del alumno que pinchemos en la tabla
-
- -->
-			<td>
-				<a href="#" th:href="@{/editar/{id}(id=${cliente.cod_cliente})}">Editar</a> | 
-				<a href="#" th:href="@{/borrar/{id}(id=${cliente.cod_cliente})}">Borrar</a>
-			</td>
-		</tr>
-	</tbody>
-</table>
 </body>
+
 </html>

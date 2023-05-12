@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import com.example.demo.service.ClienteServicio;
 @Controller
 public class ClienteController {
 
+	@Autowired
 	private ClienteServicio clienteServicio;
 
 	public ClienteController(ClienteServicio servicio) {
@@ -38,9 +40,9 @@ public class ClienteController {
 	}
 
 	@GetMapping("/editar/{id}")
-	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
+	public String mostrarFormularioEdicion(@PathVariable("id") long cod_cliente, Model model) {
 
-		Cliente cEditar = clienteServicio.findById(id);
+		Cliente cEditar = clienteServicio.findById(cod_cliente);
 
 		if (cEditar != null) {
 			model.addAttribute("cliente", cEditar);

@@ -4,6 +4,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	flex-wrap: wrap;
 }
 
 nav {
@@ -254,6 +255,20 @@ h2 {
 	color: rgb(128, 0, 128);
 	text-shadow: 0 1px 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255);
 	background-color: rgb(255, 255, 0);
+}
+
+
+#logeo{
+	background-color: black;
+	color: white;
+}
+
+#usu{
+	width: 15%;
+}
+
+#pasw{
+	width: 15%;
 }
 
 input[type="text"],
