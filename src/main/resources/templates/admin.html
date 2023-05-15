@@ -27,15 +27,24 @@
 			</tr>
 		</thead>
 		<tbody>
+<<<<<<< HEAD
 			<tr th:each="cliente : ${lista}">
+=======
+			<tr th:each="Cliente : ${lista}">
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
 				<td th:text="${cliente.cod_cliente}">1</td>
 				<td th:text="${cliente.nombre}">Nombre</td>
 				<td th:text="${cliente.dni}">Dni</td>
 				<td th:text="${cliente.telefono}">Telefono</td>
 
 				<td>
+<<<<<<< HEAD
 					<a href="#" th:href="@{/editar/{id}(id=${cliente.cod_cliente})}"><img class="navbar-brand" href="javascript:void(0)" src="/img/edit.png" alt="Editar" width="2%"></a> |
 					<a href="#" th:href="@{/borrar/{id}(id=${cliente.cod_cliente})}"><img class="navbar-brand" href="javascript:void(0)" src="/img/borrar.png" alt="Borrar" width="2%"></a>
+=======
+					<a href="#" th:href="@{/editar/{id}(id=${cliente.cod_cliente})}">Editar</a> |
+					<a href="#" th:href="@{/borrar/{id}(id=${cliente.cod_cliente})}">Borrar</a>
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
 				</td>
 			</tr>
 		</tbody>

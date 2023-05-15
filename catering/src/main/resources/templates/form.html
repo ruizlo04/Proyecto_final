@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
@@ -52,4 +53,60 @@
             </table>
         </form>
     </body>
+=======
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+        <title>Ejemplo 1 formularios</title>
+        
+        <!-- Para los ficheros css, como ya hemos visto en clase, en src/main/resources, 
+        dentro de static creamos la carpeta css con new folder, 
+        (valdría también para las imágenes dentro de carpeta images, js, etc. creando diferentes carpetas) 
+        En este caso la ruta es la que sigue
+        Para th:href basta con poner /css/nombre del css 
+        El css es uno muy cutre cogido de los ejemplos de Th del manual interactivo
+        -->
+        
+        <link rel="stylesheet" href="../static/css/main-static.css" th:href="@{/css/main2.css}" />
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h3>Bienvenido, introduzca los detalles del empleado</h3>
+        
+        <!-- Ojo, el uso de form en Thymeleaf obliga a definir 
+        el atributo object dentro de la etiqueta form. 
+        Este object debe llamarse igual que el objeto pasado en el controlador al método que esté
+        anotado con PostMapping, en nuestro caso, en el método submit en el ModelAttribute, empleadoForm. 
+        
+        Dentro de este form, se puede acceder a los campos de este object, que no es más
+        que una instancia tipo Empleado con valores en sus atributos recogidos desde los 
+        campos del formulario. Se puede acceder a dichos atributos mediante la 
+        anotación th:field y usando asterisco y el nombre del atributo entre llaves.
+        
+        Se puede consultar en el tutorial de Th qué etiquetas o atributos de html NO
+        necesitan el prefijo th, por ejemplo, type no necesita etiqueta Th 
+        El th:action, lleva el nombre de la ruta que hemos escrito en la anotación PostMapping 
+        del método submit del controller, es decir, al pulsar el botón submit
+        iremos al controllador anotado con addEmpleado, en este caso, solo se mostrará
+        en una página llamada view (que es lo que hace el ese controller) 
+        -->
+               
+        <form method="POST" th:action="addEmpleado" th:object="${empleadoForm}">
+             <table>
+                <tr>
+                    <td><label for="nombre">Nombre</label></td>
+                    <td><input type="text" th:field="*{nombre}"/></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" th:field="*{email}"/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"/></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
 </html>

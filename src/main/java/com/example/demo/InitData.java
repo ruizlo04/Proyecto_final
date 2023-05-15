@@ -1,8 +1,12 @@
 package com.example.demo;
 
+<<<<<<< HEAD
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+=======
+import java.util.List; 
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -10,6 +14,10 @@ import org.springframework.stereotype.Component;
 import com.example.demo.model.Usuario;
 import com.example.demo.repository.UsuarioRepository;
 
+<<<<<<< HEAD
+=======
+import jakarta.annotation.PostConstruct;
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
 import lombok.RequiredArgsConstructor;
 
 @Component

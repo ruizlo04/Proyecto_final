@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
 	background-color: rgb(255, 255, 255);
 	display: flex;
@@ -35,10 +36,48 @@ header {
 	animation-name: slide-back;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
+=======
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav {
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    height: auto;
+    font-size: large;
+}
+
+section{
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+
+header{
+    position: sticky; 
+    top: 0;
+    z-index: 5;
+}
+
+.carousel{
+    position: sticky; 
+    top: 0;
+    z-index: -1;
+    left: 0;
+    opacity: 0;
+    animation-name: slide-back;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
 }
 
 
 @keyframes slide-back {
+<<<<<<< HEAD
 	0% {
 		transform: translateX(-100%);
 		opacity: 0;
@@ -270,3 +309,184 @@ h2 {
 #pasw{
 	width: 15%;
 }
+=======
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+    padding: 15px 50px;
+}
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: rgb(190, 168, 66);
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img2{
+    margin-left: 30px; 	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 50%;
+}
+
+.img3{
+    width: 70%;
+    height: 500px;
+}
+
+.container2{
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 200px auto;
+}
+
+.container2 button{
+    width: 100%;
+    height: 100%;
+}
+
+.container2 p{
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 8px black;
+}
+
+.contenedor2{
+    display: flex;
+    justify-content: center;
+    align-items: center;	
+    z-index: 1;
+}
+
+.cuadrado { 
+    padding-left: 10px;
+    width: 25%;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cuadrado2 {
+    padding-left: 10px;
+    width: 70%;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenedorcito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+.contenedorcito2{
+    width: 100%;
+    height: 500px;
+    background-color:  rgb(178, 176, 45);
+    padding-top: 100px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.contenedorcito2 h1{
+    color: white;
+}
+
+.contenedorcito2 p{
+    color: white;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contenedorcito3 p{
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.cuadrado h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: rgb(178, 178, 45);
+    margin-bottom: 40px;
+}
+
+h2{
+    text-align: center;
+}
+
+.pagina1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corazon{
+    width: 20%;
+    height: 50px;
+}
+
+.persona{
+    width: 20%;
+    height: 50px;
+}
+
+.copa{
+    width: 20%;
+    height: 50px;
+}
+
+.navbar{
+    background-color:  rgb(178, 176, 45);
+}
+
+.navbar a{
+    color: white;
+}
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
