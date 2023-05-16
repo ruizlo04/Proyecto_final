@@ -2,13 +2,14 @@ package com.example.demo;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.model.Usuario;
 import com.example.demo.repository.UsuarioRepository;
 
-import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 
 @Component

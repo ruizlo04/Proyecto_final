@@ -56,15 +56,15 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
-		.authorizeHttpRequests()
-			.requestMatchers("/css/**","/js/**", "/h2-console/**").permitAll()
-			.requestMatchers("/admin/**").hasRole("ADMIN")
-			.anyRequest().authenticated()
-			.and()
-		.formLogin()
-			.loginPage("/login")
-			.defaultSuccessUrl("/index", true)
-			.permitAll();
+	    .authorizeRequests()
+	        .antMatchers("/css/**", "/js/**", "/h2-console/**").permitAll()
+	        .antMatchers("/admin/**").hasRole("ADMIN")
+	        .anyRequest().authenticated()
+	        .and()
+	    .formLogin()
+	        .loginPage("/login")
+	        .defaultSuccessUrl("/index", true)
+	        .permitAll();
 		
 		// Añadimos esto para poder seguir accediendo a la consola de H2
 		// con Spring Security habilitado.

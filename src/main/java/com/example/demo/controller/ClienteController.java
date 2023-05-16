@@ -24,7 +24,7 @@ public class ClienteController {
 	@GetMapping({ "/", "/list" })
 	public String listarTodos(Model model) {
 		model.addAttribute("lista", clienteServicio.findAll());
-		return "index";
+		return "admin";
 	}
 
 	@GetMapping("/nuevo")

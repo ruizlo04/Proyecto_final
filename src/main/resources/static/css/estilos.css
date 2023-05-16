@@ -239,17 +239,6 @@ h2 {
 	background-position: center center;
 }
 
-#formulario {
-	width: 500px;
-	padding-top: 200px;
-	margin: 0 auto;
-}
-
-#formulario input {
-	margin-top: 10px;
-	height: 50px;
-	display: block;
-}
 
 #registro h1{
 	color: rgb(128, 0, 128);
@@ -270,3 +259,24 @@ h2 {
 #pasw{
 	width: 15%;
 }
+
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+#logout {
+    color: red;
+}
+
+#logout:hover {
+    background-color: white;
+    color: red;
+}
+
