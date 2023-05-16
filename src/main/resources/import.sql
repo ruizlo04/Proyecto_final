@@ -19,6 +19,7 @@ INSERT INTO menu (cod_menu, nombre, descripcion, precio) VALUES
 	(18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99),
 	(19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99),
 	(20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99);
+<<<<<<< HEAD
 
 	INSERT INTO clientes (nombre, apellidos, email, dni, telefono)
 VALUES
@@ -33,3 +34,5 @@ VALUES
     ('Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),
     ('Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901');
 
+=======
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930

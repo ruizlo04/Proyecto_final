@@ -5,6 +5,10 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 		<version>2.7.11</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
@@ -12,6 +16,18 @@
 	<artifactId>e01holamundo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>catering</name>
+<<<<<<< HEAD
+=======
+=======
+		<version>3.0.6</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>proyecto_final</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>proyecto_final</name>
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

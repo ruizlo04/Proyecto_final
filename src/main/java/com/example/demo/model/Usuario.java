@@ -3,19 +3,44 @@ package com.example.demo.model;
 import java.util.Collection;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 @Entity
 @Data
 @NoArgsConstructor
@@ -51,7 +76,15 @@ public class Usuario implements UserDetails{
 	}
 
 	@Override
+<<<<<<< HEAD
 	public boolean isCredentialsNonExpired() { 
+=======
+<<<<<<< HEAD
+	public boolean isCredentialsNonExpired() { 
+=======
+	public boolean isCredentialsNonExpired() {
+>>>>>>> f8bb319747be262fca91b401773aac5fea9b47b4
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 		return true;
 	}
 

@@ -239,6 +239,20 @@ h2 {
 	background-position: center center;
 }
 
+<<<<<<< HEAD
+=======
+#formulario {
+	width: 500px;
+	padding-top: 200px;
+	margin: 0 auto;
+}
+
+#formulario input {
+	margin-top: 10px;
+	height: 50px;
+	display: block;
+}
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
 
 #registro h1{
 	color: rgb(128, 0, 128);
@@ -259,6 +273,7 @@ h2 {
 #pasw{
 	width: 15%;
 }
+<<<<<<< HEAD
 
 .header {
     color: #36A0FF;
@@ -280,3 +295,5 @@ h2 {
     color: red;
 }
 
+=======
+>>>>>>> 235005530682cace0918232ee6195bc47f4ff930
