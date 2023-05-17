@@ -1729,3 +1729,594 @@ Syntax error in SQL statement "([*]19, 'Menú Mexicano', 'Incluye una selección
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; se esperaba "(, SELECT, TABLE, VALUES"
 Syntax error in SQL statement "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
 (20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99) [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MENU" no encontrada
+Table "MENU" not found; SQL statement:
+INSERT INTO menu (cod_menu, nombre, descripcion, precio) VALUES [42102-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99), [42001-214]
+2023-05-17 10:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99) [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MENU" no encontrada
+Table "MENU" not found; SQL statement:
+INSERT INTO menu (cod_menu, nombre, descripcion, precio) VALUES [42102-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99), [42001-214]
+2023-05-17 10:29:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99) [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MENU" no encontrada
+Table "MENU" not found; SQL statement:
+INSERT INTO menu (cod_menu, nombre, descripcion, precio) VALUES [42102-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(1, 'Menú Ejecutivo', 'Incluye una selección de platos gourmet y postre', 25.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(2, 'Menú Vegetariano', 'Incluye una selección de platos vegetarianos y postre', 23.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(3, 'Menú Infantil', 'Incluye plato principal, bebida y postre para los más pequeños', 12.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(4, 'Menú Mediterráneo', 'Incluye una selección de platos mediterráneos y postre', 27.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(5, 'Menú Italiano', 'Incluye una selección de platos italianos y postre', 29.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(6, 'Menú Asiático', 'Incluye una selección de platos asiáticos y postre', 24.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(7, 'Menú Buffet', 'Incluye una variedad de platos fríos y calientes para servir estilo buffet', 32.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(8, 'Menú BBQ', 'Incluye una selección de carnes y acompañamientos para una barbacoa', 35.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(9, 'Menú de Mariscos', 'Incluye una selección de mariscos frescos y postre', 39.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(10, 'Menú Saludable', 'Incluye una selección de platos saludables y postre', 26.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(11, 'Menú Gourmet', 'Incluye una selección de platos gourmet y postre', 44.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(12, 'Menú Navideño', 'Incluye una selección de platos navideños y postre', 38.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(13, 'Menú para Fiestas', 'Incluye una variedad de platos fríos y calientes para fiestas', 29.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(14, 'Menú para Reuniones', 'Incluye una variedad de platos fríos y calientes para reuniones', 28.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(15, 'Menú para Bodas', 'Incluye una selección de platos elegantes para bodas y postre', 49.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(16, 'Menú para Cumpleaños', 'Incluye una selección de platos y postre para cumpleaños', 21.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(17, 'Menú para Aniversarios', 'Incluye una selección de platos y postre para aniversarios', 34.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(18, 'Menú de Tapas', 'Incluye una selección de tapas y postre', 19.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(19, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99), [42001-214]
+2023-05-17 10:30:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99)"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(20, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99) [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTES" no encontrada
+Table "CLIENTES" not found; SQL statement:
+INSERT INTO clientes (cod_cliente, nombre, apellidos, email, dni, telefono) [42102-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "VALUES[*]"; se esperaba "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "VALUES[*]"; expected "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+VALUES [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'), [42001-214]
+2023-05-17 10:30:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901') [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTES" no encontrada
+Table "CLIENTES" not found; SQL statement:
+INSERT INTO clientes (cod_cliente, nombre, apellidos, email, dni, telefono) [42102-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "VALUES[*]"; se esperaba "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "VALUES[*]"; expected "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+VALUES [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'), [42001-214]
+2023-05-17 10:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901') [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTES" no encontrada
+Table "CLIENTES" not found; SQL statement:
+INSERT INTO clientes (cod_cliente, nombre, apellidos, email, dni, telefono) [42102-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "VALUES[*]"; se esperaba "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "VALUES[*]"; expected "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+VALUES [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'), [42001-214]
+2023-05-17 10:33:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901') [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTES" no encontrada
+Table "CLIENTES" not found; SQL statement:
+INSERT INTO clientes (cod_cliente, nombre, apellidos, email, dni, telefono) [42102-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "VALUES[*]"; se esperaba "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "VALUES[*]"; expected "ROW (, (, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+VALUES [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'),"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567'), [42001-214]
+2023-05-17 10:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; se esperaba "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901') [42001-214]
+2023-05-17 12:06:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1375)
+	at org.h2.jdbc.JdbcConnection.createStatement(JdbcConnection.java:206)
+	at com.zaxxer.hikari.pool.ProxyConnection.createStatement(ProxyConnection.java:294)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.createStatement(HikariProxyConnection.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:77)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:53)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform(SchemaDropperImpl.java:554)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:845)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:519)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at jdk.proxy2/jdk.proxy2.$Proxy93.close(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:653)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1077)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:72)
+	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:262)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-05-17 12:06:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1375)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:610)
+	at com.zaxxer.hikari.pool.ProxyConnection.close(ProxyConnection.java:267)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.closeConnection(DatasourceConnectionProviderImpl.java:127)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.releaseConnection(JdbcEnvironmentInitiator.java:186)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.release(DdlTransactionIsolatorNonJtaImpl.java:99)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.release(GenerationTargetToDatabase.java:99)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform(SchemaDropperImpl.java:565)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:845)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:519)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:734)
+	at jdk.proxy2/jdk.proxy2.$Proxy93.close(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:653)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1077)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:72)
+	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:262)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor19.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)

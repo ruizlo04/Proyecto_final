@@ -21,18 +21,12 @@ public class ClienteController {
 		this.clienteServicio = servicio;
 	}
 
-	@GetMapping({ "/", "/list" })
-	public String listarTodos(Model model) {
-		model.addAttribute("lista", clienteServicio.findAll());
-		return "admin";
-	}
-
 	@GetMapping("/nuevo")
 	public String mostrarFormulario(Model model) {
 		model.addAttribute("cliente", new Cliente());
 		return "formulario";
 	}
-
+	
 	@PostMapping("/nuevo/submit")
 	public String procesarFormulario(@ModelAttribute("cliente") Cliente c) {
 		clienteServicio.add(c);

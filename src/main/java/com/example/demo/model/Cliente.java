@@ -1,6 +1,4 @@
 package com.example.demo.model;
-
-
 import javax.persistence.Entity; 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,15 +16,20 @@ public class Cliente {
 	private long cod_cliente;
 	
 	private String nombre;
+	private String apellidos;
+	private String email;
 	private String dni;
 	private String telefono;
 	
-	public Cliente(long cod_cliente, String nombre, String dni, String telefono) {
+	public Cliente(long cod_cliente, String nombre, String apellidos, String email, String dni, String telefono) {
 		super();
 		this.cod_cliente = cod_cliente;
 		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.email = email;
 		this.dni = dni;
 		this.telefono = telefono;
 	}
+	
 
 }
