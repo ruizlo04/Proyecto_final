@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio prueba</title>
+		<!-- Latest compiled and minified CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+		<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm ">
+			<div class="container-fluid">
+			<img class="navbar-brand" href="javascript:void(0)" src="../img/logo.png" alt="Logo empresa" width="5%">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mynavbar">
+				<ul class="navbar-nav m-0">
+				<li class="nav-item">
+					<a class="nav-link" href="portada.html" th:href="@{/index/}">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<b><a class="nav-link" href="eventos.html"  th:href="@{/eventos/}">Eventos</a></b>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="bodas.html"  th:href="@{/bodas/}">Bodas</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contacto.html">Contacto</a>
+				</li>
+				</ul>
+			</div>
+			</div>
+		</nav>	
+	</header>
+
+	<!-- Carousel -->
+		<div id="demo" class="carousel slide w-100 m-auto" data-bs-ride="carousel">
+
+			<!-- Indicators/dots -->
+			<div class="carousel-indicators">
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+			</div>
+		
+			<!-- The slideshow/carousel -->
+			<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="../img/catering1.jpg" alt="Catering 1" class="d-block w-100">
+			</div>
+			<div class="carousel-item">
+				<img src="../img/catering2.jpg" alt="Catering 2" class="d-block w-100">
+			</div>
+			<div class="carousel-item">
+				<img src="../img/catering3.jpg" alt="Catering 3" class="d-block w-100">
+			</div>
+			</div>
+		
+			<!-- Left and right controls/icons -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+			</button>
+		</div>
+
+	<div class="bg-light">
+		<h1  class="w-50 m-auto pt-5">
+		</h1>
+
+		<hr class="w-50 m-auto pt-5">
+
+        <h1>EVENTOS</h1>
+
+        <hr class="w-50 m-auto pt-5">
+
+		<p class="mb-5 w-50 m-auto pt-5">
+
+            Nuestro catering pone a su disposición, ya sea un cliente particular o una empresa todo lo necesario para hacer realidad su idea siempre con la máxima calidad y cuidando al máximo todos los detalles, para que en su evento no tenga que preocuparse de nada, nuestro equipo humano con mas de 20 años de experiencia se encargará de todo lo que usted desee, solo pídalo, y nosotros nos encargaremos de que se cumpla.		</p>
+
+		<hr class="w-50 m-auto pt-5 m">
+
+		<div class="contenedorcito">
+			<div class="cuadrado">
+                <span>
+                    <img class="corazon" src="../img/corazon.jpg" alt="corazon dorado">
+                </span>
+				<h3>Bodas</h3>
+				<p>En un día tan especial como es el día de su boda, nada se puede dejar a la improvisación. Es por ello que contamos con un amplio equipo de profesionales formado por cocineros, servicio de montaje y camareros cualificados y con amplia experiencia para llevar a cabo la organización y desarrollo de ese día tan importante y para que tenga la boda con la que siempre ha soñado.
+
+                    Disponemos de flexibilidad para desplazarnos al lugar que las parejas deseen.</p>
+			</div>
+			<div class="cuadrado">
+                <span>
+                    <img class="persona" src="../img/persona.jpg" alt="corazon dorado">
+                </span>
+				<h3>Comuniones y Bautizos</h3>
+				<p>Te ofrecemos distintos formatos para celebrar la Comunión o el Bautizo de tu hijo. Desde un Cóctel de pie perfecto para disfrutar del jardín, a un Cóctel más un plato de refuerzo y un postre que se tomen sentados en mesa, pasando por la alternativa de una comida en plan Buffet. Cualquiera de ellas te permitirá disfrutar de una buena comida o merienda cena en un día tan especial.
+
+                    Nuestra experiencia en este tipo de Celebraciones te garantiza el éxito y total tranquilidad en ese día tan importante.</p>
+			</div>
+			<div class="cuadrado">
+                <span>
+                    <img class="copa" src="../img/copa.jpg" alt="corazon dorado">
+                </span>
+				<h3>Coktails y Comidas de Empresa</h3>
+				<p>Para finalizaciones de reuniones, para dar la bienvenida, durante las acreditaciones, para brindar por la firma de un acuerdo, o cualquier evento de empresa … cualquier justificación es buena para comer algo y acompañarlo de una bebida.
+
+Os proponemos los aperitivos de siempre y los de ahora; con piezas clásicas y modernas, con la posibilidad de adaptarlos a los gustos internacionales y diferentes complejidades según el tiempo requerido para el evento.</p>
+			</div>
+		</div>
+
+        <div style="position: relative;">
+            <img src="../img/catering9.jpg" alt="catering 9" height="400px" width="100%">
+            <button style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 10px 20px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); border: none; border-radius: 4px; cursor: pointer;">Contactar</button>
+        </div>
+        
+	</div>	
+        	
+
+		<footer class="bg-dark text-center text-white">
+			<!-- Grid container -->
+			<div class="container p-4 pb-0">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				><img src="../img/facebook.png" width="30px"></a>
+				<!-- Instagram -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+				><img src="../img/insta.png" width="30px"></a>
+			</section>
+			<!-- Section: Social media -->
+			</div>
+			<!-- Grid container -->
+		
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2023 Copyright:
+			</div>
+			<!-- Copyright -->
+		</footer> 	
+
+
+</body>
+</html>
