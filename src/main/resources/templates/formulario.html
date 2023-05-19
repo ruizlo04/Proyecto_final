@@ -22,7 +22,7 @@
 			<div class="col-md-12">
 				<div class="well well-sm">
 					<form class="form-horizontal"
-						th:action="${cliente.cod_cliente != 0} ? @{/editar/submit} : @{/nuevo/submit}"
+						th:action="${cliente.cod_cliente != 0} ? @{/admin/cliente/editar/submit} : @{/admin/cliente/nuevo/submit}"
 						th:object="${cliente}" method="post">
 						<fieldset>
 							<legend class="text-center header">Contacta con nosotros</legend>

@@ -8,15 +8,15 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	
+
 	<title>Página admin</title>
 </head>
 
 <body>
 	<div id="menu">
-		<a th:href="@{/index}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo cliente</a>
+		<a th:href="@{/index}">Inicio</a> | <a th:href="@{/admin/cliente/nuevo}">Nuevo cliente</a>
 		<br /><br />
-		
+
 		<h1>CLIENTES</h1>
 		<table class="table table-dark table-striped">
 			<thead>
@@ -40,9 +40,40 @@
 					<td th:text="${cliente.telefono}">Telefono</td>
 
 					<td>
-						<a href="#" th:href="@{/editar/{id}(id=${cliente.cod_cliente})}"><img class="navbar-brand"
+						<a href="#" th:href="@{/admin/cliente/editar/{id}(id=${cliente.cod_cliente})}"><img class="navbar-brand"
 								href="javascript:void(0)" src="/img/edit.png" alt="Editar" width="5%"></a> |
-						<a href="#" th:href="@{/borrar/{id}(id=${cliente.cod_cliente})}"><img class="navbar-brand"
+						<a href="#" th:href="@{/admin/cliente/borrar/{id}(id=${cliente.cod_cliente})}"><img class="navbar-brand"
+								href="javascript:void(0)" src="/img/borrar.png" alt="Borrar" width="5%"></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<a th:href="@{/index}">Inicio</a> | <a th:href="@{/admin/menu/nuevoMenu}">Nuevo menú</a>
+		<br /><br />
+
+		<h1>MENÚS</h1>
+		<table class="table table-dark table-striped">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nombre</th>
+					<th>Descripcion</th>
+					<th>precio</th>
+					<th class="w-25">Operaciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="menu : ${menuList}">
+					<td th:text="${menu.cod_menu}">1</td>
+					<td th:text="${menu.nombre}">Nombre</td>
+					<td th:text="${menu.descripcion}">Descripcion</td>
+					<td th:text="${menu.precio}">Precio</td>
+
+					<td>
+						<a href="#" th:href="@{/admin/menu/editar/{id}(id=${menu.cod_menu})}"><img class="navbar-brand"
+								href="javascript:void(0)" src="/img/edit.png" alt="Editar" width="5%"></a> |
+						<a href="#" th:href="@{/admin/menu/borrar/{id}(id=${menu.cod_menu})}"><img class="navbar-brand"
 								href="javascript:void(0)" src="/img/borrar.png" alt="Borrar" width="5%"></a>
 					</td>
 				</tr>

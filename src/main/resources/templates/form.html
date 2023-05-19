@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-	<head>
-        <title>Ejemplo 1 formularios</title>
-        
-        <!-- Para los ficheros css, como ya hemos visto en clase, en src/main/resources, 
-        dentro de static creamos la carpeta css con new folder, 
-        (valdría también para las imágenes dentro de carpeta images, js, etc. creando diferentes carpetas) 
-        En este caso la ruta es la que sigue
-        Para th:href basta con poner /css/nombre del css 
-        El css es uno muy cutre cogido de los ejemplos de Th del manual interactivo
-        -->
-        
-        <link rel="stylesheet" href="../static/css/main-static.css" th:href="@{/css/main2.css}" />
-        <meta charset="utf-8" />
-    </head>
-    <body>
-		<header>
-		<nav class="navbar navbar-expand-sm ">
-			<div class="container-fluid">
-				<img class="navbar-brand" href="javascript:void(0)" src="/img/logo.png" alt="Logo empresa" width="5%">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-				<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="mynavbar">
-					<ul class="navbar-nav m-0">
-						<li class="nav-item">
-							<b><a class="nav-link" href="portada.html">Inicio</a></b>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="eventos.html">Eventos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="bodas.html">Bodas</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contacto.html">Contacto</a>
-						</li>
-						</ul>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de un CRUD completo</title>
+	<!-- Latest compiled and minified CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="../css/estilos.css" th:href="@{/css/estilos.css}" />
+</head>
+
+<body id="menugrande">
+	<div id="registro">
+		<h1>AÑADIR MENÚ</h1>
+	</div>
+
+	<div class="container d-flex align-items-center justify-content-center">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="well well-sm">
+					<form class="form-horizontal"
+						th:action="${menu.cod_menu != 0} ? @{/admin/menu/editarMenu/submit} : @{/admin/menu/nuevoMenu/submit}"
+						th:object="${menu}" method="post">
+						<fieldset>
+							<legend class="text-center header">Contacta con nosotros</legend>
+
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-2 text-center"><i
+										class="fa fa-user bigicon"></i></span>
+								<div class="col-md-8">
+									<input th:if="${menu.cod_menu != 0}" type="hidden" name="id"
+										th:field="*{cod_menu}" />
+									<input id="exampleInputEmail1" name="nombre" type="text" placeholder="Nombre"
+										class="form-control" aria-describedby="emailHelp" th:field="*{nombre}">
+								</div>
+							</div>
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-2 text-center"><i
+										class="fa fa-user bigicon"></i></span>
+								<div class="col-md-8">
+									<input name="descrpcion" type="text" placeholder="Descripcion" id="descripcion"
+										class="form-control" th:field="*{descripcion}">
+								</div>
+							</div>
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-2 text-center"><i
+										class="fa fa-user bigicon"></i></span>
+								<div class="col-md-8">
+									<input name="precio" type="number" placeholder="Precio" id="precio" class="form-control"
+										th:field="*{precio}">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-md-12 text-center">
+									<input type="submit" name="enviar" value="Enviar" />
+								</div>
+							</div>
+						</fieldset>
+					</form>
 				</div>
 			</div>
-		</nav>	
-	</header>
-        <h3>Bienvenido, introduzca los detalles del empleado</h3>
-        
-        <!-- Ojo, el uso de form en Thymeleaf obliga a definir 
-        el atributo object dentro de la etiqueta form. 
-        Este object debe llamarse igual que el objeto pasado en el controlador al método que esté
-        anotado con PostMapping, en nuestro caso, en el método submit en el ModelAttribute, empleadoForm. 
-        
-        Dentro de este form, se puede acceder a los campos de este object, que no es más
-        que una instancia tipo Empleado con valores en sus atributos recogidos desde los 
-        campos del formulario. Se puede acceder a dichos atributos mediante la 
-        anotación th:field y usando asterisco y el nombre del atributo entre llaves.
-        
-        Se puede consultar en el tutorial de Th qué etiquetas o atributos de html NO
-        necesitan el prefijo th, por ejemplo, type no necesita etiqueta Th 
-        El th:action, lleva el nombre de la ruta que hemos escrito en la anotación PostMapping 
-        del método submit del controller, es decir, al pulsar el botón submit
-        iremos al controllador anotado con addEmpleado, en este caso, solo se mostrará
-        en una página llamada view (que es lo que hace el ese controller) 
-        -->
-               
+		</div>
+	</div>
+</body>
 
-        <form method="POST" th:action="addEmpleado" th:object="${empleadoForm}">
-             <table>
-                <tr>
-                    <td><label for="nombre">Nombre</label></td>
-                    <td><input type="text" th:field="*{nombre}"/></td>
-                </tr>
-
-                <tr>
-                    <td><label for="email">Email</label></td>
-                    <td><input type="email" th:field="*{email}"/></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Submit"/></td>
-                </tr>
-            </table>
-        </form>
-    </body>
 </html>
