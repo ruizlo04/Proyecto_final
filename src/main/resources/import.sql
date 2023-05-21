@@ -29,3 +29,23 @@ INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUE
 INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123');
 INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567');
 INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901');
+
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Juan', 'Pérez', '12345678A', '123456789');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'María', 'López', '23456789B', '234567890');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Pedro', 'García', '34567890C', '345678901');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Laura', 'Martínez', '45678901D', '456789012');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Carlos', 'Fernández', '56789012E', '567890123');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Ana', 'Rodríguez', '67890123F', '678901234');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Luis', 'Gómez', '78901234G', '789012345');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Marta', 'Torres', '89012345H', '890123456');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'David', 'Sánchez', '90123456I', '901234567');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Carmen', 'Ramírez', '01234567J', '012345678');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Sergio', 'Navarro', '12345678K', '123456789');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Elena', 'Romero', '23456789L', '234567890');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Diego', 'Hernández', '34567890M', '345678901');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Javier', 'Morales', '56789012O', '567890123');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Raquel', 'Suárez', '67890123P', '678901234');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Adrián', 'Castro', '78901234Q', '789012345');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Isabel', 'Ortega', '89012345R', '890123456');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Hugo', 'Molina', '90123456S', '901234567');
+INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Paula', 'Garrido', '01234567T', '012345678');

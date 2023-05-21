@@ -10,20 +10,7 @@ import com.example.demo.service.ClienteServicio;
 import com.example.demo.service.MenuServicio;
 
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/admin/")
 public class AdminController {
-	
-	@Autowired
-	private ClienteServicio clienteServicio;
-	
-	@Autowired
-	private MenuServicio menuServicio;
-
-	@GetMapping({ "/", "/list" })
-	public String listarTodos(Model model) {
-		model.addAttribute("lista", clienteServicio.findAll());
-		model.addAttribute("menuList", menuServicio.findAll());	
-		return "admin";
-	}
 	
 }

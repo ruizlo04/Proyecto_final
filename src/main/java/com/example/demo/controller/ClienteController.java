@@ -13,7 +13,7 @@ import com.example.demo.model.Cliente;
 import com.example.demo.service.ClienteServicio;
 
 @Controller
-@RequestMapping("/admin/cliente")
+@RequestMapping("/admin/")
 public class ClienteController {
 
 	@Autowired
@@ -21,6 +21,12 @@ public class ClienteController {
 
 	public ClienteController(ClienteServicio servicio) {
 		this.clienteServicio = servicio;
+	}
+	
+	@GetMapping({ "/", "/list" })
+	public String listarTodos(Model model) {
+		model.addAttribute("lista", clienteServicio.findAll());
+		return "admin";
 	}
 
 	@GetMapping("/nuevo")
@@ -32,7 +38,7 @@ public class ClienteController {
 	@PostMapping("/nuevo/submit")
 	public String procesarFormulario(@ModelAttribute("cliente") Cliente c) {
 		clienteServicio.add(c);
-		return "redirect:/admin/cliente/";// Podría ser también return "redirect:/list
+		return "redirect:/admin/";// Podría ser también return "redirect:/list
 	}
 
 	@GetMapping("/editar/{id}")
@@ -46,7 +52,7 @@ public class ClienteController {
 		} else {
 			// No existe ningún alumno con el Id proporcionado.
 			// Redirigimos hacia el listado.
-			return "redirect:/admin/cliente/";
+			return "redirect:/admin/";
 		}
 
 	}
@@ -54,14 +60,14 @@ public class ClienteController {
 	@PostMapping("/editar/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("cliente") Cliente c) {
 		clienteServicio.edit(c);
-		return "redirect:/admin/cliente/";// Volvemos a redirigir la listado a través del controller
+		return "redirect:/admin/";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
 	}
 
 	@GetMapping("/borrar/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		clienteServicio.delete(id);
-		return "redirect:/admin/cliente/";
+		return "redirect:/admin/";
 	}
 
 	@GetMapping("/cliente")
@@ -70,7 +76,7 @@ public class ClienteController {
 		Cliente cliente = new Cliente();
 		model.addAttribute("clienteForm", cliente);
 
-		return "redirect:/admin/cliente/";
+		return "redirect:/admin/";
 
 	}
 

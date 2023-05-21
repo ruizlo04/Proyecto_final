@@ -22,7 +22,7 @@
 			<div class="col-md-12">
 				<div class="well well-sm">
 					<form class="form-horizontal"
-						th:action="${menu.cod_menu != 0} ? @{/admin/menu/editarMenu/submit} : @{/admin/menu/nuevoMenu/submit}"
+						th:action="${menu.cod_menu != 0} ? @{/admin/menu/editar/submit} : @{/admin/menu/nuevoMenu/submit}"
 						th:object="${menu}" method="post">
 						<fieldset>
 							<legend class="text-center header">Contacta con nosotros</legend>
