@@ -1,9 +1,11 @@
 package com.example.demo.service;
 
 import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.example.demo.model.Cliente;
 import com.example.demo.repository.ClienteRepository;
-import org.springframework.stereotype.Service;
 
 @Service
 public class ClienteServicio {
@@ -59,4 +61,11 @@ public class ClienteServicio {
 		return clienteRepository.findById(id).orElse(null);
 	}
 
+	public List<Cliente> findAllProducts() {
+		return clienteRepository.findAll();
+	}
+	
+	public List<Cliente> findByNombre(String nombre){
+		return clienteRepository.findByNombreContainingIgnoreCase(nombre);
+	}
 }

@@ -39,7 +39,7 @@
 							<a class="nav-link" href="bodas.html" th:href="@{/bodas/}">Bodas</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="registro.html" th:href="@{/registro}">Registro</a>
+							<a class="nav-link" href="registro.html" sec:authorize="hasRole('ROLE_USER')" th:href="@{/registro}">Registro</a>
 						</li>
 					</ul>
 				</div>

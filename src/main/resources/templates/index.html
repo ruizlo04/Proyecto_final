@@ -49,8 +49,7 @@
 							<a class="nav-link" href="bodas.html" th:href="@{/bodas}">Bodas</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="view.html" th:href="@{/registro}"
-								sec:authorize="hasRole('ROLE_USER')">Reservar</a>
+							<a class="nav-link" href="registro.html" sec:authorize="hasRole('ROLE_USER')" th:href="@{/registro}">Reservar</a>
 						</li>
 						<li class="nav-item">
 							<a id="logout" href="javascript:document.getElementById('logoutForm').submit()"

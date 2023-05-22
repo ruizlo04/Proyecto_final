@@ -39,7 +39,7 @@
 											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
 												<input type="text" id="form3Example1c" name="nombre"
-													placeholder="Nombre completo" class="form-control" />
+													placeholder="Nombre completo" class="form-control" th:field="*{nombre}" />
 												<label class="form-label" for="form3Example1c">Nombre completo</label>
 											</div>
 										</div>
@@ -49,7 +49,7 @@
 											<div class="form-outline flex-fill mb-0">
 												<input id="exampleInputEmail1" name="email" type="text"
 													placeholder="Email" class="form-control"
-													aria-describedby="emailHelp" />
+													aria-describedby="emailHelp" th:field="*{email}" />
 												<label class="form-label" for="form3Example4c">Email</label>
 											</div>
 										</div>
@@ -57,7 +57,7 @@
 										<div class="d-flex flex-row align-items-center mb-4">
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
-												<input type="date" id="form3Example4cd" class="form-control" />
+												<input type="date" id="fecha" class="form-control"/>
 												<label class="form-label" for="form3Example4cd">Fecha del evento</label>
 											</div>
 										</div>
@@ -66,16 +66,6 @@
 											<div class="form-outline flex-fill mb-0">
 												<input name="tipo" type="text" placeholder="Tipo"
 													id="tipo" class="form-control" th:field="*{tipo_evento}">
-												<label class="form-label" for="form3Example4cd">Tipo de evento</label>
-												<span>
-													<select>
-														<option>Boda</option>
-														<option>Bautizo o Comunión</option>
-														<option>Cocktail</option>
-														<option>Congreso</option>
-														<option>Otro</option>
-													</select>
-												</span>
 											</div>
 
 										</div>

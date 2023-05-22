@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.formbeans.SearchBean;
 import com.example.demo.model.Cliente;
 import com.example.demo.service.ClienteServicio;
 
@@ -79,6 +80,14 @@ public class ClienteController {
 		return "redirect:/admin/";
 
 	}
+	
+	@PostMapping("/search")
+	  public String searchProducto(@ModelAttribute("clienteForm") SearchBean searchBean,
+			 Model model){
+	  	model.addAttribute("cliente", clienteServicio.findByNombre(searchBean.getSearch()));
+	  
+	  return "admin";
+	  }
 
 	public String submit(@ModelAttribute("clienteForm") Cliente cliente, Model model) {
 
