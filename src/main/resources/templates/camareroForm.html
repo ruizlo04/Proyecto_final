@@ -14,7 +14,7 @@
 
 <body id="menugrande">
 	<div id="registro">
-		<h1>AÑADIR MENÚ</h1>
+		<h1>AÑADIR CAMARERO</h1>
 	</div>
 
 	<div class="container d-flex align-items-center justify-content-center">
@@ -22,17 +22,16 @@
 			<div class="col-md-12">
 				<div class="well well-sm">
 					<form class="form-horizontal"
-						th:action="${menu.cod_menu != 0} ? @{/view/editarMenu/submitMenu} : @{/view/nuevoMenu/submitMenu}"
-						th:object="${menu}" method="post">
+						th:action="${camareros.cod_camarero != 0} ? @{/camarero/editar/submit} : @{/camarero/nuevoCamarero/submit}"
+						th:object="${camareros}" method="post">
 						<fieldset>
-							<legend class="text-center header">Contacta con nosotros</legend>
 
 							<div class="form-group">
 								<span class="col-md-1 col-md-offset-2 text-center"><i
 										class="fa fa-user bigicon"></i></span>
 								<div class="col-md-8">
-									<input th:if="${menu.cod_menu != 0}" type="hidden" name="id"
-										th:field="*{cod_menu}" />
+									<input th:if="${camareros.cod_camarero != 0}" type="hidden" name="id"
+										th:field="*{cod_camarero}" />
 									<input id="exampleInputEmail1" name="nombre" type="text" placeholder="Nombre"
 										class="form-control" aria-describedby="emailHelp" th:field="*{nombre}">
 								</div>
@@ -41,16 +40,24 @@
 								<span class="col-md-1 col-md-offset-2 text-center"><i
 										class="fa fa-user bigicon"></i></span>
 								<div class="col-md-8">
-									<input name="descrpcion" type="text" placeholder="Descripcion" id="descripcion"
-										class="form-control" th:field="*{descripcion}">
+									<input name="apellidos" type="text" placeholder="Apellidos" id="apellidos"
+										class="form-control" th:field="*{apellidos}">
 								</div>
 							</div>
 							<div class="form-group">
 								<span class="col-md-1 col-md-offset-2 text-center"><i
 										class="fa fa-user bigicon"></i></span>
 								<div class="col-md-8">
-									<input name="precio" type="number" placeholder="Precio" id="precio" class="form-control"
-										th:field="*{precio}">
+									<input name="dni" type="text" placeholder="dni" id="dni" class="form-control"
+										th:field="*{dni}">
+								</div>
+							</div>
+							<div class="form-group">
+								<span class="col-md-1 col-md-offset-2 text-center"><i
+										class="fa fa-user bigicon"></i></span>
+								<div class="col-md-8">
+									<input name="telefono" type="text" placeholder="telefono" id="telefono" class="form-control"
+										th:field="*{telefono}">
 								</div>
 							</div>
 

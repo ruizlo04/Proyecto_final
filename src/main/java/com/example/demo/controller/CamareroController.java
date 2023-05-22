@@ -27,14 +27,14 @@ public class CamareroController {
 	
 	@GetMapping("/nuevoCamarero")
 	public String mostrarFormulario(Model model) {
-		model.addAttribute("camarero", new Camareros());
+		model.addAttribute("camareros", new Camareros());
 		return "camareroForm";
 	}
 	
 	@PostMapping("/nuevoCamarero/submit")
 	public String procesarFormulario(@ModelAttribute("camarero") Camareros c) {
 		camareroServicio.add(c);
-		return "redirect:/admin/camarero/";// Podría ser también return "redirect:/list
+		return "redirect:/camarero/";// Podría ser también return "redirect:/list
 	}
 	
 	@GetMapping("/editar/{id}")
@@ -43,12 +43,12 @@ public class CamareroController {
 		Camareros cEditar = camareroServicio.findById(cod_camarero);
 
 		if (cEditar != null) {
-			model.addAttribute("camarero",cEditar);
-			return "camarero";
+			model.addAttribute("camareros",cEditar);
+			return "camareroForm";
 		} else {
 			// No existe ningún alumno con el Id proporcionado.
 			// Redirigimos hacia el listado.
-			return "redirect:/admin/camarero/";
+			return "redirect:/camarero/";
 		}
 
 	}
@@ -56,14 +56,14 @@ public class CamareroController {
 	@PostMapping("/editar/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("camarero") Camareros c) {
 		camareroServicio.edit(c);
-		return "redirect:/admin/camarero/";// Volvemos a redirigir la listado a través del controller
+		return "redirect:/camarero/";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
 	}
 	
 	@GetMapping("/borrar/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		camareroServicio.delete(id);
-		return "redirect:/admin/camarero/";
+		return "redirect:/camarero/";
 	}
 	
 	@GetMapping("/camarero")
@@ -72,7 +72,7 @@ public class CamareroController {
 		Camareros camarero = new Camareros();
 		model.addAttribute("camareroForm", camarero);
 
-		return "redirect:/admin/camarero/";
+		return "redirect:/camarero/";
 
 	}
 	

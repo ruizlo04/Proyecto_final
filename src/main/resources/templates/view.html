@@ -42,11 +42,16 @@
 								<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Camareros</span>
 							</a>
 						</li>
+						<li>
+							<a href="reserva.html" th:href="@{/reserva/}" class="nav-link align-middle px-0">
+								<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Reserva</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div id="menu">
-				<a th:href="@{/index}">Inicio</a> | <a th:href="@{/view/menu/nuevoMenu}">Nuevo menú</a>
+				<a th:href="@{/index}">Inicio</a> | <a th:href="@{/view/nuevoMenu}">Nuevo menú</a>
 				<br /><br />
 
 				<h1>MENÚS</h1>
@@ -68,10 +73,10 @@
 							<td th:text="${menu.precio}">Precio</td>
 
 							<td>
-								<a href="#" th:href="@{/view/editar/{id}(id=${menu.cod_menu})}"><img
+								<a href="#" th:href="@{/view/editarMenu/{id}(id=${menu.cod_menu})}"><img
 										class="navbar-brand" href="javascript:void(0)" src="/img/edit.png" alt="Editar"
 										width="5%"></a> |
-								<a href="#" th:href="@{/view/borrar/{id}(id=${menu.cod_menu})}"><img
+								<a href="#" th:href="@{/view/borrarMenu/{id}(id=${menu.cod_menu})}"><img
 										class="navbar-brand" href="javascript:void(0)" src="/img/borrar.png"
 										alt="Borrar" width="5%"></a>
 							</td>

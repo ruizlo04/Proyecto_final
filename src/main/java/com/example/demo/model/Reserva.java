@@ -1,4 +1,7 @@
 package com.example.demo.model;
+
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,27 +13,27 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data 
 @NoArgsConstructor
-public class Cliente {
+public class Reserva {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long cod_cliente;
+	private long cod_reserva;
 	
 	private String nombre;
-	private String apellidos;
 	private String email;
-	private String dni;
-	private String telefono;
+	private LocalDate fecha;
+	private String tipo_evento;
+	private String lugar_evento;
 	
-	public Cliente(long cod_cliente, String nombre, String apellidos, String email, String dni, String telefono) {
+	public Reserva(long cod_reserva, String nombre, String email, LocalDate fecha, String tipo_evento,
+			String lugar_evento) {
 		super();
-		this.cod_cliente = cod_cliente;
+		this.cod_reserva = cod_reserva;
 		this.nombre = nombre;
-		this.apellidos = apellidos;
 		this.email = email;
-		this.dni = dni;
-		this.telefono = telefono;
+		this.fecha = fecha;
+		this.tipo_evento = tipo_evento;
+		this.lugar_evento = lugar_evento;
 	}
 	
-
 }

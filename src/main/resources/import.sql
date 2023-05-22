@@ -49,3 +49,14 @@ INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (D
 INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Isabel', 'Ortega', '89012345R', '890123456');
 INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Hugo', 'Molina', '90123456S', '901234567');
 INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Paula', 'Garrido', '01234567T', '012345678');
+
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 1', 'reserva1@example.com', '2023-05-22', 'Boda', 'Salón de eventos');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 2', 'reserva2@example.com', '2023-06-10', 'Aniversario', 'Jardín');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 3', 'reserva3@example.com', '2023-07-05', 'Cumpleaños', 'Restaurante');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 4', 'reserva4@example.com', '2023-08-15', 'Conferencia', 'Centro de convenciones');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 5', 'reserva5@example.com', '2023-09-01', 'Reunión corporativa', 'Oficina');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 6', 'reserva6@example.com', '2023-09-15', 'Boda', 'Playa');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 7', 'reserva7@example.com', '2023-10-10', 'Aniversario', 'Salón de eventos');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 8', 'reserva8@example.com', '2023-11-20', 'Cumpleaños', 'Jardín');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 9', 'reserva9@example.com', '2023-12-05', 'Conferencia', 'Hotel');
+INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 10', 'reserva10@example.com', '2023-12-25', 'Reunión corporativa', 'Oficina');

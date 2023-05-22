@@ -13,7 +13,7 @@ import com.example.demo.model.Cliente;
 import com.example.demo.service.ClienteServicio;
 
 @Controller
-@RequestMapping("/admin/")
+@RequestMapping("/admin")
 public class ClienteController {
 
 	@Autowired

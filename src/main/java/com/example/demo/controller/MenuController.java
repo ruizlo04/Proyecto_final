@@ -31,13 +31,13 @@ public class MenuController {
 		return "form";
 	}
 	
-	@PostMapping("/nuevoMenu/submit")
+	@PostMapping("/nuevoMenu/submitMenu")
 	public String procesarFormulario(@ModelAttribute("menu") Menu m) {
 		menuServicio.add(m);
 		return "redirect:/view/";// Podría ser también return "redirect:/list
 	}
 	
-	@GetMapping("/editar/{id}")
+	@GetMapping("/editarMenu/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long cod_menu, Model model) {
 
 		Menu mEditar = menuServicio.findById(cod_menu);
@@ -53,14 +53,14 @@ public class MenuController {
 
 	}
 	
-	@PostMapping("/editar/submit")
+	@PostMapping("/editarMenu/submitMenu")
 	public String procesarFormularioEdicion(@ModelAttribute("menu") Menu m) {
 		menuServicio.edit(m);
 		return "redirect:/view/";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
 	}
 	
-	@GetMapping("/borrar/{id}")
+	@GetMapping("/borrarMenu/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		menuServicio.delete(id);
 		return "redirect:/view/";
@@ -76,7 +76,7 @@ public class MenuController {
 
 	}
 	
-	public String submit(@ModelAttribute("menuForm") Menu menu, Model model) {
+	public String submitMenu(@ModelAttribute("menuForm") Menu menu, Model model) {
 
 		model.addAttribute("view", menu);
 

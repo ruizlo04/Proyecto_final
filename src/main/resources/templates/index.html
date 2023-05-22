@@ -14,13 +14,18 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
+
+	<script>
+		AOS.init();
+	</script>
+	
 	<form th:action="@{/logout}" method="POST" id="logoutForm"></form>
-	<h1>
-		Bienvenido, administrador: <span sec:authentication="name">Usuario</span>
-	</h1>
 	<header>
 		<nav class="navbar navbar-expand-sm">
 			<div class="container-fluid">
@@ -31,7 +36,8 @@
 				<div class="collapse navbar-collapse" id="mynavbar">
 					<ul class="navbar-nav ml-auto"> <!-- Añade la clase 'ml-auto' para alinear a la derecha -->
 						<li class="nav-item">
-							<b><a class="nav-link" th:href="@{/admin/}">Administrar</a></b>
+							<a class="nav-link" th:href="@{/admin/}"
+								sec:authorize="hasRole('ROLE_ADMIN')">Administrar</a>
 						</li>
 						<li class="nav-item">
 							<b><a class="nav-link" href="portada.html" th:href="@{/index/}">Inicio</a></b>
@@ -43,7 +49,8 @@
 							<a class="nav-link" href="bodas.html" th:href="@{/bodas}">Bodas</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="view.html" th:href="@{/registro}">Registro</a>
+							<a class="nav-link" href="view.html" th:href="@{/registro}"
+								sec:authorize="hasRole('ROLE_USER')">Reservar</a>
 						</li>
 						<li class="nav-item">
 							<a id="logout" href="javascript:document.getElementById('logoutForm').submit()"
@@ -89,10 +96,6 @@
 	</div>
 
 	<div class="bg-light">
-		<h1 class="w-50 m-auto pt-5">
-		</h1>
-
-		<hr class="w-50 m-auto pt-5">
 
 		<p class="m-5">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, officiis quo tempore velit dolore
@@ -147,17 +150,17 @@
 
 		</div>
 
-		<div class="img2">
+		<div class="img2" data-aos="flip-left">
 			<section class="container2">
-				<a class="nav-link" href="eventos.html" th:href="@{/eventos/}"><button class="btn"><img class="img3" href="javascript:void(0)"
-							src="/img/catering5.jpg" alt="Catering 5">
+				<a class="nav-link" href="eventos.html" th:href="@{/eventos/}"><button class="btn"><img class="img3"
+							href="javascript:void(0)" src="/img/catering5.jpg" alt="Catering 5">
 						<p>EVENTOS</p>
 					</button></a>
 			</section>
 
 			<section class="container2">
-				<a class="nav-link" href="bodas.html" th:href="@{/bodas/}"><button class="btn"><img class="img3" href="javascript:void(0)"
-							src="/img/catering5.jpg" alt="Catering 5">
+				<a class="nav-link" href="bodas.html" th:href="@{/bodas/}"><button class="btn"><img class="img3"
+							href="javascript:void(0)" src="/img/catering5.jpg" alt="Catering 5">
 						<p>BODAS</p>
 					</button></a>
 
