@@ -30,7 +30,7 @@ public class ReservaController {
 		model.addAttribute("lista", reservaServicio.findAll());
 		return "reserva";
 	}
-
+	
 	@GetMapping("/nuevo")
 	public String mostrarFormulario(Model model) {
 		model.addAttribute("reserva", new Reserva());
@@ -78,7 +78,7 @@ public class ReservaController {
 		Cliente cliente = new Cliente();
 		model.addAttribute("clienteForm", cliente);
 
-		return "redirect:/reserva/";
+		return "redirect:/registro/";
 
 	}
 
