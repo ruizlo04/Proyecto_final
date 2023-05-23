@@ -239,43 +239,82 @@ h2 {
 }
 
 
-#registro h1{
+#registro h1 {
 	color: rgb(128, 0, 128);
 	text-shadow: 0 1px 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255);
 	background-color: rgb(255, 255, 0);
 }
 
 
-#logeo{
+#logeo {
 	background-color: black;
 	color: white;
 }
 
-#usu{
+#usu {
 	width: 15%;
 }
 
-#pasw{
+#pasw {
 	width: 15%;
 }
 
 .header {
-    color: #36A0FF;
-    font-size: 27px;
-    padding: 10px;
+	color: #36A0FF;
+	font-size: 27px;
+	padding: 10px;
 }
 
 .bigicon {
-    font-size: 35px;
-    color: #36A0FF;
+	font-size: 35px;
+	color: #36A0FF;
 }
 
 #logout {
-    color: red;
+	color: red;
 }
 
 #logout:hover {
-    background-color: white;
-    color: red;
+	background-color: white;
+	color: red;
 }
 
+.container {
+	margin-top: 50px;
+}
+
+.well {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-horizontal .form-group {
+	margin-bottom: 20px;
+}
+
+.bigicon {
+	font-size: 24px;
+}
+
+.form-control {
+	border-radius: 5px;
+}
+
+textarea.form-control {
+	resize: vertical;
+}
+
+input[type="submit"] {
+	background-color: #333;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #555;
+}

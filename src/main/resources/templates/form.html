@@ -25,7 +25,6 @@
 						th:action="${menu.cod_menu != 0} ? @{/view/editarMenu/submitMenu} : @{/view/nuevoMenu/submitMenu}"
 						th:object="${menu}" method="post">
 						<fieldset>
-							<legend class="text-center header">Contacta con nosotros</legend>
 
 							<div class="form-group">
 								<span class="col-md-1 col-md-offset-2 text-center"><i
@@ -49,7 +48,7 @@
 								<span class="col-md-1 col-md-offset-2 text-center"><i
 										class="fa fa-user bigicon"></i></span>
 								<div class="col-md-8">
-									<input name="precio" type="number" placeholder="Precio" id="precio" class="form-control"
+									<input name="precio" type="text" placeholder="Precio" id="precio" class="form-control"
 										th:field="*{precio}">
 								</div>
 							</div>
