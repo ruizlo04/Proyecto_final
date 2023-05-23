@@ -14,86 +14,88 @@
 
 <body>
 
-		<div class="container-fluid">
-			<div class="row flex-nowrap">
-				<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-					<div
-						class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-						<a href="/"
-							class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-							<span class="fs-5 d-none d-sm-inline">Menu</span>
-						</a>
-						<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-							id="menu">
-							<li class="nav-item">
-								<a href="index.html" th:href="@{/index}" class="nav-link align-middle px-0">
-									<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
-								</a>
-							</li>
-							<li>
-								<a href="admin.html" th:href="@{/admin/}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-speedometer2"></i> <span
-										class="ms-1 d-none d-sm-inline">Clientes</span> </a>
-							</li>
-							<li>
-								<a href="view.html" th:href="@{/view/}" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-table"></i> <span
-										class="ms-1 d-none d-sm-inline">Menús</span></a>
-							</li>
-							<li>
-								<a href="camarero.html" th:href="@{/camarero/}" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-									<i class="fs-4 bi-bootstrap"></i> <span
-										class="ms-1 d-none d-sm-inline">Camareros</span></a>
-							</li>
-							<li>
-								<a href="reserva.html" th:href="@{/reserva/}" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-									<i class="fs-4 bi-bootstrap"></i> <span
-										class="ms-1 d-none d-sm-inline">Reservas</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div id="menu">
-					<a th:href="@{/index}">Inicio</a> | <a th:href="@{/admin/nuevo}">Nuevo cliente</a>
-					<br /><br />
-
-					<h1>CLIENTES</h1>
-					<table class="table table-dark table-striped">
-						<thead>
-							<tr>
-								<th>Id</th>
-								<th>Nombre</th>
-								<th>Apellidos</th>
-								<th class="w-25">Email</th>
-								<th>dni</th>
-								<th>telefono</th>
-								<th class="w-25">Operaciones</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr th:each="cliente : ${lista}">
-								<td th:text="${cliente.cod_cliente}">1</td>
-								<td th:text="${cliente.nombre}">Nombre</td>
-								<td th:text="${cliente.apellidos}">Apellidos</td>
-								<td th:text="${cliente.email}">Email</td>
-								<td th:text="${cliente.dni}">Dni</td>
-								<td th:text="${cliente.telefono}">Telefono</td>
-
-								<td>
-									<a href="#" th:href="@{/admin/editar/{id}(id=${cliente.cod_cliente})}"><img
-											class="navbar-brand" href="javascript:void(0)" src="/img/edit.png"
-											alt="Editar" width="5%"></a> |
-									<a href="#" th:href="@{/admin/borrar/{id}(id=${cliente.cod_cliente})}"><img
-											class="navbar-brand" href="javascript:void(0)" src="/img/borrar.png"
-											alt="Borrar" width="5%"></a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+	<div class="container-fluid">
+		<div class="row flex-nowrap">
+			<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+				<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+					<a href="/"
+						class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+						<span class="fs-5 d-none d-sm-inline">Menu</span>
+					</a>
+					<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+						id="menu">
+						<li class="nav-item">
+							<a href="index.html" th:href="@{/index}" class="nav-link align-middle px-0">
+								<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin.html" th:href="@{/admin/}" data-bs-toggle="collapse"
+								class="nav-link px-0 align-middle">
+								<i class="fs-4 bi-speedometer2"></i> <span
+									class="ms-1 d-none d-sm-inline">Clientes</span> </a>
+						</li>
+						<li>
+							<a href="view.html" th:href="@{/view/}" class="nav-link px-0 align-middle">
+								<i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Menús</span></a>
+						</li>
+						<li>
+							<a href="camarero.html" th:href="@{/camarero/}" data-bs-toggle="collapse"
+								class="nav-link px-0 align-middle ">
+								<i class="fs-4 bi-bootstrap"></i> <span
+									class="ms-1 d-none d-sm-inline">Camareros</span></a>
+						</li>
+						<li>
+							<a href="reserva.html" th:href="@{/reserva/}" data-bs-toggle="collapse"
+								class="nav-link px-0 align-middle ">
+								<i class="fs-4 bi-bootstrap"></i> <span
+									class="ms-1 d-none d-sm-inline">Reservas</span></a>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</div>
+			<div id="menu">
+				<a th:href="@{/index}">Inicio</a> | <a th:href="@{/admin/nuevo}">Nuevo cliente</a>
+				<br /><br />
 
-	</body>
+				<h1>CLIENTES</h1>
+
+				<table class="table table-dark table-striped">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Apellidos</th>
+							<th class="w-25">Email</th>
+							<th>dni</th>
+							<th>telefono</th>
+							<th class="w-25">Operaciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="cliente : ${lista}">
+							<td th:text="${cliente.cod_cliente}">1</td>
+							<td th:text="${cliente.nombre}">Nombre</td>
+							<td th:text="${cliente.apellidos}">Apellidos</td>
+							<td th:text="${cliente.email}">Email</td>
+							<td th:text="${cliente.dni}">Dni</td>
+							<td th:text="${cliente.telefono}">Telefono</td>
+
+							<td>
+								<a href="#" th:href="@{/admin/editar/{id}(id=${cliente.cod_cliente})}"><img
+										class="navbar-brand" href="javascript:void(0)" src="/img/edit.png" alt="Editar"
+										width="5%"></a> |
+								<a href="#" th:href="@{/admin/borrar/{id}(id=${cliente.cod_cliente})}"><img
+										class="navbar-brand" href="javascript:void(0)" src="/img/borrar.png"
+										alt="Borrar" width="5%"></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</body>
 
 </html>

@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,7 +23,10 @@ public class Reserva {
 	
 	private String nombre;
 	private String email;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fecha;
+	
 	private String tipo_evento;
 	private String lugar_evento;
 	
