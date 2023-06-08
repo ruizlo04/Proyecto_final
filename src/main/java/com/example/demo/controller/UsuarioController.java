@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,6 +39,10 @@ public class UsuarioController {
 	
 	@PostMapping("/nuevo/submit")
 	public String procesarFormulario(@ModelAttribute("usuario") Usuario u) {
+//		System.out.println(u.getPassword());
+//		String passEncripted = new BCryptPasswordEncoder().encode(u.getPassword());
+//		System.out.println(passEncripted);
+//		u.setPassword(passEncripted);
 		usuarioServicio.add(u);
 		return "redirect:/index/";// Podría ser también return "redirect:/list
 	}

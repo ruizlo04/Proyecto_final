@@ -29,6 +29,9 @@ public class Menu {
 		this.precio = precio;
 	}
 	
+	public String getEnumSeletor() {
+		return this.nombre.concat(" ").concat(Double.toString(this.getPrecio())); 
+	}
 	
 
 }

@@ -19,17 +19,6 @@ INSERT INTO menu (cod_menu, nombre, descripcion, precio) VALUES (DEFAULT, 'Menú
 INSERT INTO menu (cod_menu, nombre, descripcion, precio) VALUES (DEFAULT, 'Menú Mexicano', 'Incluye una selección de platos mexicanos y postre', 31.99);
 INSERT INTO menu (cod_menu, nombre, descripcion, precio) VALUES (DEFAULT, 'Menú Americano', 'Incluye una selección de platos americanos y postre', 33.99);
 
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT, 'Juan', 'Pérez', 'juan.perez@example.com', '12345678A', '555-1234');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'María', 'López', 'maria.lopez@example.com', '87654321B', '555-5678');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Pedro', 'García', 'pedro.garcia@example.com', '98765432C', '555-9012');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Laura', 'Martínez', 'laura.martinez@example.com', '56789012D', '555-3456');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Carlos', 'Fernández', 'carlos.fernandez@example.com', '21098765E', '555-7890');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Ana', 'Rodríguez', 'ana.rodriguez@example.com', '54321098F', '555-2345');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Miguel', 'Gómez', 'miguel.gomez@example.com', '89012345G', '555-6789');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Sara', 'Torres', 'sara.torres@example.com', '67890123H', '555-0123');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Luis', 'Ramírez', 'luis.ramirez@example.com', '32109876I', '555-4567');
-INSERT INTO cliente (cod_cliente, nombre, apellidos, email, dni, telefono) VALUES (DEFAULT,'Elena', 'Hernández', 'elena.hernandez@example.com', '45678901J', '555-8901');
-
 INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Juan', 'Pérez', '12345678A', '123456789');
 INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'María', 'López', '23456789B', '234567890');
 INSERT INTO camareros (cod_camarero, nombre, apellidos, dni, telefono) VALUES (DEFAULT, 'Pedro', 'García', '34567890C', '345678901');

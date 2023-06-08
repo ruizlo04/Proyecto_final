@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.service.MenuServicio;
 import com.example.demo.service.ReservaServicio;
 import com.example.demo.service.UsuarioServicio;
 
@@ -20,6 +21,9 @@ public class MainController {
 	
 	@Autowired
 	private ReservaServicio reservaServicio;
+	
+	@Autowired
+	private MenuServicio menuServicio;
 	
 	@Autowired
 	private UsuarioServicio usuarioServicio;
@@ -41,6 +45,7 @@ public class MainController {
 	
 	@GetMapping("/nuevaReserva")
 	public String mostrarFormularioUser(Model model) {
+		model.addAttribute("menus",menuServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
 		return "nuevaReserva";
 	}
