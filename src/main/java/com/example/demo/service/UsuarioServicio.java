@@ -2,61 +2,64 @@ package com.example.demo.service;
 
 import java.util.List;
 import com.example.demo.model.Cliente;
+import com.example.demo.model.Usuario;
 import com.example.demo.repository.ClienteRepository;
+import com.example.demo.repository.UsuarioRepository;
+
 import org.springframework.stereotype.Service;
 
 @Service
-public class ClienteServicio {
+public class UsuarioServicio {
 	
-	private ClienteRepository clienteRepository;
+	private UsuarioRepository usuarioRepository;
 	
-	public ClienteServicio(ClienteRepository repo) {
-		this.clienteRepository = repo;
+	public UsuarioServicio(UsuarioRepository repo) {
+		this.usuarioRepository = repo;
 	}
 	
 	/**
-	 * Inserta un nuevo Cliente
+	 * Inserta un nuevo Usuario
 	 * 
-	 * @param c el Cliente a insertar
-	 * @return El cliente ya insertado (con el Id no vacío).
+	 * @param u el Usuario a insertar
+	 * @return El usuario ya insertado (con el Id no vacío).
 	 */
-	public Cliente add(Cliente c) { return clienteRepository.save(c); }
+	public Usuario add(Usuario u) { return usuarioRepository.save(u); }
 	
 	
 	/**
-	 * Edita un cliente, si existe; si no, lo inserta como uno nuevo.
-	 * @param c
+	 * Edita un usuario, si existe; si no, lo inserta como uno nuevo.
+	 * @param u
 	 * @return
 	 */
-	public Cliente edit(Cliente c) { return clienteRepository.save(c); }
+	public Usuario edit(Usuario u) { return usuarioRepository.save(u); }
 
 	/**
-	 * Elimina el cliente
+	 * Elimina el usuario
 	 * 
-	 * @param c
+	 * @param u
 	 */
-	public void delete(Cliente c) { clienteRepository.delete(c); }
+	public void delete(Usuario u) { usuarioRepository.delete(u); }
 	
 	/**
-	 * Elimina a un cliente por su Id
+	 * Elimina a un usuario por su Id
 	 * @param id
 	 */
-	public void delete(long id) { clienteRepository.deleteById(id); }
+	public void delete(long id) { usuarioRepository.deleteById(id); }
 	
 	/**
-	 * Devuelve todos los clientes
+	 * Devuelve todos los usuarios
 	 * @return
 	 */
-	public List<Cliente> findAll() { return clienteRepository.findAll(); }
+	public List<Usuario> findAll() { return usuarioRepository.findAll(); }
 	
 	
 	/**
-	 * Devuelve un cliente en base a su Id
+	 * Devuelve un usuario en base a su Id
 	 * @param id
-	 * @return el cliente encontrado o <code>null</code>
+	 * @return el usuario encontrado o <code>null</code>
 	 */
-	public Cliente findById(long id) {
-		return clienteRepository.findById(id).orElse(null);
+	public Usuario findById(long id) {
+		return usuarioRepository.findById(id).orElse(null);
 	}
 
 }

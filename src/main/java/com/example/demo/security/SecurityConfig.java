@@ -62,7 +62,7 @@ public class SecurityConfig {
 	        .anyRequest().authenticated()
 	        .and()
 	    .formLogin()
-	        .loginPage("/login")
+	        .loginPage("/login").failureUrl("/loginerror")
 	        .defaultSuccessUrl("/index", true)
 	        .permitAll();
 		

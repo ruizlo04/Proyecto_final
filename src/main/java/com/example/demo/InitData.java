@@ -1,9 +1,10 @@
 package com.example.demo;
 
-import java.util.List;
+import java.util.List; 
 
 import javax.annotation.PostConstruct;
 
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 

@@ -34,7 +34,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="mynavbar">
-					<ul class="navbar-nav ml-auto"> <!-- Añade la clase 'ml-auto' para alinear a la derecha -->
+					<ul class="navbar-nav ml-auto"> 
 						<li class="nav-item">
 							<a class="nav-link" th:href="@{/admin/}"
 								sec:authorize="hasRole('ROLE_ADMIN')">Administrar</a>
@@ -42,20 +42,23 @@
 						<li class="nav-item">
 							<b><a class="nav-link" href="portada.html" th:href="@{/index/}">Inicio</a></b>
 						</li>
+<!--						<li class="nav-item">-->
+<!--							<a class="nav-link" href="eventos.html" th:href="@{/user/eventos}">Eventos</a>-->
+<!--						</li>-->
+<!--						<li class="nav-item">-->
+<!--							<a class="nav-link" href="bodas.html" th:href="@{/user/bodas}">Bodas</a>-->
+<!--						</li>-->
 						<li class="nav-item">
-							<a class="nav-link" href="eventos.html" th:href="@{/user/eventos}">Eventos</a>
+							<a class="nav-link" href="nuevaReserva.html" th:href="@{/user/nuevaReserva}"
+								sec:authorize="hasRole('ROLE_USER')">Mis reservas</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="bodas.html" th:href="@{/user/bodas}">Bodas</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="registroUser.html" th:href="@{/user/nuevoUser}"
-								sec:authorize="hasRole('ROLE_USER')">Reservar</a>
+							<a class="nav-link" href="hazteUsuario.html" th:href="@{/usuario/hazteUsuario}"
+								sec:authorize="hasRole('ROLE_USER')">Hazte cliente</a>
 						</li>
 						<li class="nav-item">
 							<a id="logout" href="javascript:document.getElementById('logoutForm').submit()"
-								class="nav-link">Log
-								out</a>
+								class="nav-link">Log out</a>
 						</li>
 					</ul>
 				</div>
