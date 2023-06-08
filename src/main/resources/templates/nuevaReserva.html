@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-	<title>Document</title>
+	<title>Nueva Reserva</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Realizar reserva</p>
 
 									<form class="form-horizontal"
-										th:action="${reserva.cod_reserva != 0} ? @{/user/editar/submit} : @{/user/nuevoUser/submit}"
+										th:action="${reserva.cod_reserva != 0} ? @{/user/reserva/editar/submit} : @{/user/nuevoUser/submit}"
 										th:object="${reserva}" method="post">
 
 										<div class="d-flex flex-row align-items-center mb-4">

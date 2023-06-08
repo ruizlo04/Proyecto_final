@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-	<title>Document</title>
+	<title>Hazte usuario</title>
 </head>
 
 <body>
@@ -27,76 +27,58 @@
 							<div class="row justify-content-center">
 								<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Realizar reserva</p>
+									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Crear usuario</p>
 
 									<form class="form-horizontal"
-										th:action="${reserva.cod_reserva != 0} ? @{/reserva/editar/submit} : @{/reserva/nuevo/submit}"
-										th:object="${reserva}" method="post">
+										th:action="${usuario.id != 0} ? @{/usuario/editar/submit} : @{/usuario/nuevo/submit}"
+										th:object="${usuario}" method="post">
 
 										<div class="d-flex flex-row align-items-center mb-4">
-											<input th:if="${reserva.cod_reserva != 0}" type="hidden" name="id"
-												th:field="*{cod_reserva}" />
+											<input th:if="${usuario.id != 0}" type="hidden" name="id"
+												th:field="*{id}" />
 											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
 												<input type="text" id="form3Example1c" name="nombre"
-													placeholder="Nombre completo" class="form-control" th:field="*{nombre}"/>
-												<label class="form-label" for="form3Example1c">Nombre completo</label>
+													placeholder="Nombre completo" class="form-control"
+													th:field="*{nombre}" required>
+												<label class="form-label" for="form3Example1c">Nombre</label>
 											</div>
 										</div>
 
 										<div class="d-flex flex-row align-items-center mb-4">
-											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-											<div class="form-outline flex-fill mb-0">
-												<input id="exampleInputEmail1" name="email" type="text"
-													placeholder="Email" class="form-control"
-													aria-describedby="emailHelp" th:field="*{email}"/>
-												<label class="form-label" for="form3Example4c">Email</label>
+											<div class="form-outline">
+												<input type="text" id="form3Example2" name="nombre"
+													placeholder="Apellido" class="form-control" th:field="*{apellido}"
+													required>
+												<label class="form-label" for="form3Example2">Last name</label>
 											</div>
 										</div>
 
 										<div class="d-flex flex-row align-items-center mb-4">
-											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
-											<div class="form-outline flex-fill mb-0">
-												<input type="date" id="form3Example4cd" class="form-control" th:field="*{fecha}"/>
-												<label class="form-label" for="form3Example4cd">Fecha del evento</label>
-											</div>
-										</div>
-										<div class="d-flex flex-row align-items-center mb-4">
-											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
-											<div class="form-outline flex-fill mb-0">
-												<input name="tipo" type="text" placeholder="Tipo"
-													id="tipo" class="form-control" th:field="*{tipo_evento}">
-												<label class="form-label" for="form3Example4cd">Tipo de evento</label>
-											</div>
-
+											<input type="text" class="form-control" name="newUsername"
+												placeholder="New Username" th:field="*{username}" required autofocus>
+											<label class="form-label" for="form3Example2">New Username</label>
 										</div>
 
 										<div class="d-flex flex-row align-items-center mb-4">
-											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
-											<div class="form-outline flex-fill mb-0">
-												<input name="lugar" type="text" placeholder="Lugar"
-													id="lugar" class="form-control" th:field="*{lugar_evento}">
-											</div>
+											<input type="password" class="form-control" name="password"
+												placeholder="Password" th:field="*{password}" required>
+											<label class="form-label" for="form3Example2">Contraseña</label>
 										</div>
-
-										<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-											<input type="submit" name="enviarUser" value="Enviar" />
-										</div>
-
-									</form>
-
 								</div>
-								<div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-									<img href="javascript:void(0)" src="/img/catering6.jpg" alt="Catering 3"
-										class="d-block w-100">
-
+								<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+									<input type="submit" name="enviarUser" value="Enviar" />
 								</div>
+
+								</form>
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 

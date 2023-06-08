@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,45 +9,46 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.model.Cliente;
-import com.example.demo.service.ClienteServicio;
+import com.example.demo.model.Usuario;
+import com.example.demo.service.UsuarioServicio;
 
 @Controller
-@RequestMapping("/admin")
-public class ClienteController {
+@RequestMapping("/usuario")
+public class UsuarioController {
 
 	@Autowired
-	private ClienteServicio clienteServicio;
+	private UsuarioServicio usuarioServicio;
 
-	public ClienteController(ClienteServicio servicio) {
-		this.clienteServicio = servicio;
+	public UsuarioController(UsuarioServicio servicio) {
+		super();
+		this.usuarioServicio = servicio;
 	}
 	
 	@GetMapping({ "/", "/list" })
 	public String listarTodos(Model model) {
-		model.addAttribute("lista", clienteServicio.findAll());
+		model.addAttribute("lista", usuarioServicio.findAll());
 		return "admin";
 	}
 
 	@GetMapping("/nuevo")
 	public String mostrarFormulario(Model model) {
-		model.addAttribute("cliente", new Cliente());
+		model.addAttribute("usuario", new Usuario());
 		return "formulario";
 	}
 	
 	@PostMapping("/nuevo/submit")
-	public String procesarFormulario(@ModelAttribute("cliente") Cliente c) {
-		clienteServicio.add(c);
-		return "redirect:/admin/";// Podría ser también return "redirect:/list
+	public String procesarFormulario(@ModelAttribute("usuario") Usuario u) {
+		usuarioServicio.add(u);
+		return "redirect:/index/";// Podría ser también return "redirect:/list
 	}
 
 	@GetMapping("/editar/{id}")
-	public String mostrarFormularioEdicion(@PathVariable("id") long cod_cliente, Model model) {
+	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
 
-		Cliente cEditar = clienteServicio.findById(cod_cliente);
+		Usuario uEditar = usuarioServicio.findById(id);
 
-		if (cEditar != null) {
-			model.addAttribute("cliente", cEditar);
+		if (uEditar != null) {
+			model.addAttribute("usuario", uEditar);
 			return "formulario";
 		} else {
 			// No existe ningún alumno con el Id proporcionado.
@@ -58,31 +59,43 @@ public class ClienteController {
 	}
 
 	@PostMapping("/editar/submit")
-	public String procesarFormularioEdicion(@ModelAttribute("cliente") Cliente c) {
-		clienteServicio.edit(c);
-		return "redirect:/admin/";// Volvemos a redirigir la listado a través del controller
+	public String procesarFormularioEdicion(@ModelAttribute("cliente") Usuario c) {
+		usuarioServicio.edit(c);
+		return "redirect:/index/";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
 	}
 
 	@GetMapping("/borrar/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		clienteServicio.delete(id);
+		usuarioServicio.delete(id);
 		return "redirect:/admin/";
 	}
 
-	@GetMapping("/cliente")
+	@GetMapping("/usuario")
 	public String showForm(Model model) {
 
-		Cliente cliente = new Cliente();
+		Usuario cliente = new Usuario();
 		model.addAttribute("clienteForm", cliente);
 
-		return "redirect:/admin/";
+		return "redirect:/index/";
 
 	}
+	
+	@GetMapping("/hazteUsuario")
+	public String hazteUser(Model model) {
+		model.addAttribute("usuario", new Usuario());
+		return "hazteUsuario";
+	}
+	
+	@PostMapping("/hazteUsuario/submit")
+	public String procesarHacerteUser(@ModelAttribute("usuario") Usuario u) {
+		usuarioServicio.add(u);
+		return "redirect:/index/"; 
+	}
 
-	public String submit(@ModelAttribute("clienteForm") Cliente cliente, Model model) {
+	public String submit(@ModelAttribute("clienteForm") Usuario usuario, Model model) {
 
-		model.addAttribute("cliente", cliente);
+		model.addAttribute("usuario", usuario);
 
 		return "view";
 	}

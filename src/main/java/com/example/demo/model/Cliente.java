@@ -1,36 +1,75 @@
 package com.example.demo.model;
+import java.util.Collection; 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data 
 @NoArgsConstructor
-public class Cliente {
+@AllArgsConstructor
+@Builder
+public class Cliente implements UserDetails{
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long cod_cliente;
+	@GeneratedValue
+	private Long cod_cliente;
 	
-	private String nombre;
-	private String apellidos;
-	private String email;
-	private String dni;
-	private String telefono;
+	private String nombreUsuario;
+	private String contrasena;
 	
-	public Cliente(long cod_cliente, String nombre, String apellidos, String email, String dni, String telefono) {
-		super();
-		this.cod_cliente = cod_cliente;
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.email = email;
-		this.dni = dni;
-		this.telefono = telefono;
+	private boolean admin;
+	
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		String role = "ROLE_";
+		role += (admin) ? "CLIENTE" : "USER";
+		return List.of(new SimpleGrantedAuthority(role));
+	}	
+
+	@Override
+	public boolean isAccountNonExpired() { 
+		return true;
 	}
+	
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() { 
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		return true;
+	}
+
+	@Override
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 
 }

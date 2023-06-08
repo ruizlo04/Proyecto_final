@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-import java.util.Collection;
+import java.util.Collection; 
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -27,7 +27,7 @@ public class Usuario implements UserDetails{
 	@GeneratedValue
 	private Long id;
 	
-	private String username, password;
+	private String username, password, nombre, apellido;
 	
 	private boolean admin;
 	
