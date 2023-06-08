@@ -3,18 +3,23 @@ package com.example.demo.model;
 import java.util.Collection; 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -31,7 +36,11 @@ public class Usuario implements UserDetails{
 	
 	private boolean admin;
 	
-	
+	@OneToMany(
+			mappedBy = "usuario", 
+			fetch = FetchType.EAGER,
+			cascade = CascadeType.REMOVE)
+	private List<Reserva> reservas;
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -59,4 +68,7 @@ public class Usuario implements UserDetails{
 	public boolean isEnabled() {
 		return true;
 	}
+	
+	
+	
 }

@@ -25,6 +25,50 @@
 					<div class="card text-black" style="border-radius: 25px;">
 						<div class="card-body p-md-5">
 							<div class="row justify-content-center">
+								<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Mis reservas</p>
+								
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Nombre</th>
+											<th>Fecha</th>
+											<th>Tipo</th>
+											<th>Menú</th>
+											<th>Lugar</th>
+											<th>Invitados</th>
+											<th>Total</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>John</td>
+											<td>03/07/2023</td>
+											<td>Bodas</td>
+											<td>Menú Vegetariano</td>
+											<td>Sevilla</td>
+											<td>56</td>
+											<td>1600.00</td>
+										</tr>
+										<tr>
+											<td>John</td>
+											<td>03/07/2023</td>
+											<td>Bodas</td>
+											<td>Menú Vegetariano</td>
+											<td>Sevilla</td>
+											<td>56</td>
+											<td>3498.90</td>
+										</tr>
+										<tr>
+											<td>John</td>
+											<td>03/07/2023</td>
+											<td>Bodas</td>
+											<td>Menú Vegetariano</td>
+											<td>Sevilla</td>
+											<td>56</td>
+											<td>6000.00</td>
+										</tr>
+									</tbody>
+								</table>
 								<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
 									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Realizar reserva</p>
@@ -39,43 +83,56 @@
 											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
 												<input type="text" id="form3Example1c" name="nombre"
-													placeholder="Nombre completo" class="form-control" th:field="*{nombre}"/>
-												<label class="form-label" for="form3Example1c">Nombre completo</label>
-											</div>
-										</div>
-
-										<div class="d-flex flex-row align-items-center mb-4">
-											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-											<div class="form-outline flex-fill mb-0">
-												<input id="exampleInputEmail1" name="email" type="text"
-													placeholder="Email" class="form-control"
-													aria-describedby="emailHelp" th:field="*{email}"/>
-												<label class="form-label" for="form3Example4c">Email</label>
+													placeholder="Nombre completo" class="form-control"
+													th:field="*{usuario.nombre}" />
 											</div>
 										</div>
 
 										<div class="d-flex flex-row align-items-center mb-4">
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
-												<input type="date" id="form3Example4cd" class="form-control" th:field="*{fecha}"/>
-												<label class="form-label" for="form3Example4cd">Fecha del evento</label>
+												<input type="date" id="form3Example4cd" class="form-control"
+													th:field="*{fecha}" />
 											</div>
 										</div>
 										<div class="d-flex flex-row align-items-center mb-4">
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
-												<input name="tipo" type="text" placeholder="Tipo"
-													id="tipo" class="form-control" th:field="*{tipo_evento}">
-												<label class="form-label" for="form3Example4cd">Tipo de evento</label>
+												<select class="form-select" aria-label="Default select example"
+													name="tipo_evento" th:field="*{tipo_evento}">
+													<option value="Bodas">Bodas</option>
+													<option value="Comunión">Comunión</option>
+													<option value="Coktail">Cocktail</option>
+												</select>
 											</div>
-
 										</div>
 
 										<div class="d-flex flex-row align-items-center mb-4">
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
-												<input name="lugar" type="text" placeholder="Lugar"
-													id="lugar" class="form-control" th:field="*{lugar_evento}">
+												<select class="form-select" aria-label="Default select example"
+													name="menu">
+
+													<option th:each="menu : ${menus}" th:value="${menu.cod_menu}"
+														th:text="${menu.getEnumSeletor()}"></option>
+												</select>
+											</div>
+										</div>
+
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<input name="lugar" type="text" placeholder="Lugar" id="lugar"
+													class="form-control" th:field="*{lugar_evento}">
+											</div>
+										</div>
+
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<input name="num_personas" type="number" min="1" max="1000"
+													placeholder="Numero personas" id="numPersonas" class="form-control"
+													th:field="*{num_personas}">
 											</div>
 										</div>
 

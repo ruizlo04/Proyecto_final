@@ -1,11 +1,11 @@
 package com.example.demo.service;
 
-import java.util.List;
-import com.example.demo.model.Cliente;
+import java.util.List; 
 import com.example.demo.model.Usuario;
-import com.example.demo.repository.ClienteRepository;
 import com.example.demo.repository.UsuarioRepository;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,12 +18,14 @@ public class UsuarioServicio {
 	}
 	
 	/**
-	 * Inserta un nuevo Usuario
+	 * Inserta un nuevo Usuario	
 	 * 
 	 * @param u el Usuario a insertar
 	 * @return El usuario ya insertado (con el Id no vacío).
 	 */
-	public Usuario add(Usuario u) { return usuarioRepository.save(u); }
+	public Usuario add(Usuario u) { 
+		return usuarioRepository.save(u); 
+	}
 	
 	
 	/**

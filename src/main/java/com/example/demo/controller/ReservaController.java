@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.beans.factory.annotation.Autowired;  
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.model.Cliente;
+import com.example.demo.model.Usuario;
 import com.example.demo.model.Reserva;
 import com.example.demo.service.ReservaServicio;
 
@@ -75,8 +75,8 @@ public class ReservaController {
 	@GetMapping("/cliente")
 	public String showForm(Model model) {
 
-		Cliente cliente = new Cliente();
-		model.addAttribute("clienteForm", cliente);
+		Usuario usuario = new Usuario();
+		model.addAttribute("usuarioForm", usuario);
 
 		return "redirect:/registro/";
 
