@@ -40,7 +40,7 @@ public class ReservaController {
 	@PostMapping("/nuevo/submit")
 	public String procesarFormulario(@ModelAttribute("reserva") Reserva r) {
 		reservaServicio.add(r);
-		return "redirect:/reserva/";
+		return "redirect:/reserva";
 	}
 
 	@GetMapping("/editar/{id}")
@@ -54,7 +54,7 @@ public class ReservaController {
 		} else {
 			// No existe ningún alumno con el Id proporcionado.
 			// Redirigimos hacia el listado.
-			return "redirect:/reserva/";
+			return "redirect:/reserva";
 		}
 
 	}

@@ -1,12 +1,17 @@
 package com.example.demo.model;
 
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data 
@@ -20,6 +25,12 @@ public class Menu {
 	private String nombre;
 	private String descripcion;
 	private double precio;
+	
+	@ManyToOne
+	@JoinColumn(foreignKey = @ForeignKey(name="fk_men_res"))
+	@ToString.Exclude
+	@EqualsAndHashCode.Exclude
+	private Menu menu;
 
 	public Menu(Long cod_menu, String nombre, String descripcion, double precio) {
 		super();

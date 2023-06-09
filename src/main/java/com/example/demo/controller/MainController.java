@@ -11,6 +11,7 @@ import com.example.demo.service.ReservaServicio;
 import com.example.demo.service.UsuarioServicio;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.model.Reserva;
 import com.example.demo.model.Usuario;
@@ -53,7 +54,30 @@ public class MainController {
 	@PostMapping("/nuevaReserva/submit")
 	public String procesarFormularioUser(@ModelAttribute("reserva") Reserva r) {
 		reservaServicio.add(r);
-		return "redirect:/index/"; 
+		return "redirect:/reserva"; 
+	}
+	
+	@GetMapping("/editar/{id}")
+	public String mostrarFormularioEdicion(@PathVariable("id") long cod_reserva, Model model) {
+
+		Reserva rEditar = reservaServicio.findById(cod_reserva);
+
+		if (rEditar != null) {
+			model.addAttribute("reserva", rEditar);
+			return "registro";
+		} else {
+			// No existe ningún alumno con el Id proporcionado.
+			// Redirigimos hacia el listado.
+			return "redirect:/reserva";
+		}
+
+	}
+	
+	@PostMapping("/editar/submit")
+	public String procesarFormularioEdicion(@ModelAttribute("reserva") Reserva r) {
+		reservaServicio.edit(r);
+		return "redirect:/reserva";// Volvemos a redirigir la listado a través del controller
+		// para pintar la lista actualizada con la modificación hecha
 	}
 	
 //	@GetMapping("/hazteUsuario")

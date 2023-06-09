@@ -4,18 +4,18 @@ import java.util.List;
 import com.example.demo.model.Usuario;
 import com.example.demo.repository.UsuarioRepository;
 
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UsuarioServicio {
 	
-	private UsuarioRepository usuarioRepository;
-	
-	public UsuarioServicio(UsuarioRepository repo) {
-		this.usuarioRepository = repo;
-	}
+	private final UsuarioRepository usuarioRepository;
+	private final PasswordEncoder passwordEncoder;
 	
 	/**
 	 * Inserta un nuevo Usuario	
@@ -24,6 +24,7 @@ public class UsuarioServicio {
 	 * @return El usuario ya insertado (con el Id no vacío).
 	 */
 	public Usuario add(Usuario u) { 
+		u.setPassword(passwordEncoder.encode(u.getPassword()));
 		return usuarioRepository.save(u); 
 	}
 	
@@ -33,7 +34,9 @@ public class UsuarioServicio {
 	 * @param u
 	 * @return
 	 */
-	public Usuario edit(Usuario u) { return usuarioRepository.save(u); }
+	public Usuario edit(Usuario u) { 
+		u.setPassword(passwordEncoder.encode(u.getPassword()));
+		return usuarioRepository.save(u); }
 
 	/**
 	 * Elimina el usuario

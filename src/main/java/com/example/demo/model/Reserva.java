@@ -1,12 +1,16 @@
 package com.example.demo.model;
 
-import java.time.LocalDate; 
+import java.time.LocalDate;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.JoinColumn;
 import javax.persistence.ForeignKey;
 
@@ -27,7 +31,6 @@ public class Reserva {
 	private long cod_reserva;
 	
 	private String nombre;
-	private String email;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fecha;
@@ -43,12 +46,17 @@ public class Reserva {
 	
 	private int num_personas;
 	
-	public Reserva(long cod_reserva, String nombre, String email, LocalDate fecha, String tipo_evento,
+	@OneToMany(
+			mappedBy = "menu", 
+			fetch = FetchType.EAGER,
+			cascade = CascadeType.REMOVE)
+	private List<Menu> menus;
+	
+	public Reserva(long cod_reserva, String nombre, LocalDate fecha, String tipo_evento,
 			String lugar_evento, int num_personas) {
 		super();
 		this.cod_reserva = cod_reserva;
 		this.nombre = nombre;
-		this.email = email;
 		this.fecha = fecha;
 		this.tipo_evento = tipo_evento;
 		this.lugar_evento = lugar_evento;
