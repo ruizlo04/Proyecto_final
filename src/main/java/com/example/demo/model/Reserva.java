@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 import javax.persistence.ForeignKey;
 
@@ -24,6 +25,7 @@ import lombok.ToString;
 @Entity
 @Data 
 @NoArgsConstructor
+@Table(name = "reserva")
 public class Reserva {
 	
 	@Id
@@ -46,12 +48,12 @@ public class Reserva {
 	
 	private int num_personas;
 	
-	@OneToMany(
-			mappedBy = "menu", 
-			fetch = FetchType.EAGER,
-			cascade = CascadeType.REMOVE)
-	private List<Menu> menus;
-	
+	@ManyToOne
+	@JoinColumn(foreignKey = @ForeignKey(name="fk_res_men"))
+	@ToString.Exclude
+	@EqualsAndHashCode.Exclude 
+	private Menu menu;
+
 	public Reserva(long cod_reserva, String nombre, LocalDate fecha, String tipo_evento,
 			String lugar_evento, int num_personas) {
 		super();
@@ -63,4 +65,15 @@ public class Reserva {
 		this.num_personas = num_personas;
 	}
 	
+	public double calcularTotal() {
+		double total = 0.0;
+		double descuento = 10;
+		double cien = 100;
+		if (num_personas > 25) {
+			return total = menu.getPrecio() * num_personas;
+		} else {
+			return total = ((menu.getPrecio() * num_personas) * descuento) / cien;
+		}
+		
+	}
 }

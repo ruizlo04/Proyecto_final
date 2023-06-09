@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<section class="vh-100" style="background-color: #eee;">
+	<section class="vh-100" style="background-color: rgb(164, 164, 0);">
 		<div class="container h-100">
 			<div class="row d-flex justify-content-center align-items-center h-100">
 				<div class="col-lg-12 col-xl-11">
@@ -28,7 +28,7 @@
 						<div class="card-body p-md-5">
 							<div class="row justify-content-center">
 								<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Mis reservas</p>
-								
+
 								<table class="table">
 									<thead>
 										<tr>
@@ -40,10 +40,11 @@
 											<th>Lugar</th>
 											<th>Invitados</th>
 											<th>Total</th>
+											<th>Operaciones</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr th:each = "reserva : ${lista}">
+										<tr th:each="reserva : ${lista}">
 											<td th:text="${reserva.cod_reserva}">1</td>
 											<td th:text="${usuario.username}">Nombre</td>
 											<td th:text="${reserva.fecha}">Fecha</td>
@@ -51,7 +52,18 @@
 											<td th:text="${menu.nombre}">Menú</td>
 											<td th:text="${reserva.lugar_evento}">Lugar</td>
 											<td th:text="${reserva.num_personas}">Invitados</td>
-											<td>Total</td>
+											<td th:text="${reserva.calcularTotal}">Total</td>
+
+											<td>
+												<a href="#"
+													th:href="@{/reserva/editar/{id}(id=${reserva.cod_reserva})}"><img
+														class="navbar-brand" href="javascript:void(0)"
+														src="/img/edit.png" alt="Editar" width="5%"></a> |
+												<a href="#"
+													th:href="@{/reserva/borrar/{id}(id=${reserva.cod_reserva})}"><img
+														class="navbar-brand" href="javascript:void(0)"
+														src="/img/borrar.png" alt="Borrar" width="5%"></a>
+											</td>
 										</tr>
 									</tbody>
 								</table>
