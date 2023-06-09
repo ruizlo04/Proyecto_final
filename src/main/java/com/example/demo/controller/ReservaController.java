@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.model.Usuario;
 import com.example.demo.model.Reserva;
+import com.example.demo.service.MenuServicio;
 import com.example.demo.service.ReservaServicio;
 
 @Controller
@@ -19,6 +20,9 @@ public class ReservaController {
 	
 	@Autowired
 	private ReservaServicio reservaServicio;
+	
+	@Autowired
+	private MenuServicio menuServicio;
 
 	public ReservaController(ReservaServicio reservaServicio) {
 		super();
@@ -64,6 +68,19 @@ public class ReservaController {
 		reservaServicio.edit(r);
 		return "redirect:/reserva/";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
+	}
+	
+	@GetMapping("/nuevaReserva")
+	public String mostrarFormularioUser(Model model) {
+		model.addAttribute("menus",menuServicio.findAll());
+		model.addAttribute("reserva", new Reserva());
+		return "nuevaReserva";
+	}
+	
+	@PostMapping("/nuevaReserva/submit")
+	public String procesarFormularioUser(@ModelAttribute("reserva") Reserva r) {
+		reservaServicio.add(r);
+		return "redirect:/reserva"; 
 	}
 
 	@GetMapping("/borrar/{id}")

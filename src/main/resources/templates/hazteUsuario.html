@@ -30,7 +30,7 @@
 									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Crear usuario</p>
 
 									<form class="form-horizontal"
-										th:action="${usuario.id != 0} ? @{/usuario/editar/submit} : @{/usuario/nuevo/submit}"
+										th:action="${usuario.id != 0} ? @{/usuario/editar/submit} : @{/usuario/hazteUsuario/submit}"
 										th:object="${usuario}" method="post">
 
 										<div class="d-flex flex-row align-items-center mb-4">

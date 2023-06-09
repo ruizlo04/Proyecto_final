@@ -42,7 +42,8 @@ public class Usuario implements UserDetails{
 	@OneToMany(
 			mappedBy = "usuario", 
 			fetch = FetchType.EAGER,
-			cascade = CascadeType.REMOVE)
+			cascade = CascadeType.ALL, 
+			orphanRemoval = true)
 	private List<Reserva> reservas;
 	
 	@Override

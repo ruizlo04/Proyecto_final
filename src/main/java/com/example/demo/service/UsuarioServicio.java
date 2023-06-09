@@ -1,12 +1,16 @@
 package com.example.demo.service;
 
-import java.util.List; 
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import com.example.demo.model.Reserva;
 import com.example.demo.model.Usuario;
+import com.example.demo.repository.ReservaRepository;
 import com.example.demo.repository.UsuarioRepository;
 
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +20,7 @@ public class UsuarioServicio {
 	
 	private final UsuarioRepository usuarioRepository;
 	private final PasswordEncoder passwordEncoder;
+	private final ReservaRepository reservaRepository;
 	
 	/**
 	 * Inserta un nuevo Usuario	
@@ -66,5 +71,19 @@ public class UsuarioServicio {
 	public Usuario findById(long id) {
 		return usuarioRepository.findById(id).orElse(null);
 	}
+	
+	@Transactional
+	public void guardarReserva(Reserva reserva, Usuario usuario) {
+	    if (usuario.getId() == null) {
+	        usuarioRepository.save(usuario);
+	    }
+
+	    // Asigna el usuario a la reserva
+	    reserva.setUsuario(usuario);
+
+	    // Guarda la reserva
+	    reservaRepository.save(reserva);
+	}
+
 
 }

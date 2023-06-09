@@ -39,10 +39,10 @@ public class UsuarioController {
 	
 	@PostMapping("/nuevo/submit")
 	public String procesarFormulario(@ModelAttribute("usuario") Usuario u) {
-//		System.out.println(u.getPassword());
-//		String passEncripted = new BCryptPasswordEncoder().encode(u.getPassword());
-//		System.out.println(passEncripted);
-//		u.setPassword(passEncripted);
+		System.out.println(u.getPassword());
+		String passEncripted = new BCryptPasswordEncoder().encode(u.getPassword());
+		System.out.println(passEncripted);
+		u.setPassword(passEncripted);
 		usuarioServicio.add(u);
 		return "redirect:/index/";// Podría ser también return "redirect:/list
 	}
@@ -64,8 +64,8 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/editar/submit")
-	public String procesarFormularioEdicion(@ModelAttribute("cliente") Usuario c) {
-		usuarioServicio.edit(c);
+	public String procesarFormularioEdicion(@ModelAttribute("usuario") Usuario u) {
+		usuarioServicio.edit(u);
 		return "redirect:/index/";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
 	}
@@ -79,8 +79,8 @@ public class UsuarioController {
 	@GetMapping("/usuario")
 	public String showForm(Model model) {
 
-		Usuario cliente = new Usuario();
-		model.addAttribute("clienteForm", cliente);
+		Usuario usuario = new Usuario();
+		model.addAttribute("usuarioForm", usuario);
 
 		return "redirect:/index/";
 
@@ -98,10 +98,10 @@ public class UsuarioController {
 		return "redirect:/index/"; 
 	}
 
-	public String submit(@ModelAttribute("clienteForm") Usuario usuario, Model model) {
-
-		model.addAttribute("usuario", usuario);
-
-		return "view";
+	@PostMapping("/submit")
+	public String submit(@ModelAttribute("usuarioForm") Usuario usuario, Model model) {
+	    model.addAttribute("usuario", usuario);
+	    return "view";
 	}
+
 }

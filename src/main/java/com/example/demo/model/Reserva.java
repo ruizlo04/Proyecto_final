@@ -1,9 +1,8 @@
 package com.example.demo.model;
 
-import java.time.LocalDate;
+import java.time.LocalDate; 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -15,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 import javax.persistence.ForeignKey;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;
@@ -41,7 +42,8 @@ public class Reserva {
 	private String lugar_evento;
 	
 	@ManyToOne
-	@JoinColumn(foreignKey = @ForeignKey(name="fk_res_usu"))
+	@Cascade(CascadeType.SAVE_UPDATE)
+	@JoinColumn(name = "id")
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
 	private Usuario usuario;
