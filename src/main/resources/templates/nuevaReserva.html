@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-	<script src="/js/calendario.js"></script>
+	<script src="/js/formularioReserva.js"></script>
 
 	<title>Nueva Reserva</title>
 </head>
@@ -82,7 +82,7 @@
 											<div class="form-outline flex-fill mb-0">
 												<input type="text" id="form3Example1c" name="nombre"
 													placeholder="Nombre usuario" class="form-control"
-													th:field="*{usuario.username}" />
+													th:field="*{usuario.username}" required/>
 											</div>
 										</div>
 
@@ -90,14 +90,14 @@
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
 												<input type="date" id="form3Example4cd" class="form-control"
-													th:field="*{fecha}" />
+													th:field="*{fecha}" required/>
 											</div>
 										</div>
 										<div class="d-flex flex-row align-items-center mb-4">
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
 												<select class="form-select" aria-label="Default select example"
-													name="tipo_evento" th:field="*{tipo_evento}">
+													name="tipo_evento" th:field="*{tipo_evento}" required/>
 													<option value="Bodas">Bodas</option>
 													<option value="Comunión">Comunión</option>
 													<option value="Coktail">Cocktail</option>
@@ -112,7 +112,7 @@
 													name="menu">
 
 													<option th:each="menu : ${menus}" th:value="${menu.cod_menu}"
-														th:text="${menu.getEnumSeletor()}"></option>
+														th:text="${menu.getEnumSeletor()}" required/></option>
 												</select>
 											</div>
 										</div>
@@ -121,7 +121,7 @@
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
 											<div class="form-outline flex-fill mb-0">
 												<input name="lugar" type="text" placeholder="Lugar" id="lugar"
-													class="form-control" th:field="*{lugar_evento}">
+													class="form-control" th:field="*{lugar_evento}" required>
 											</div>
 										</div>
 
