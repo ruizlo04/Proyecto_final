@@ -25,15 +25,10 @@
 						</a>
 						<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
 							id="menu">
-							<li class="nav-item">
-								<a href="index.html" th:href="@{/index}" class="nav-link align-middle px-0">
-									<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
-								</a>
-							</li>
 							<li>
 								<a href="admin.html" th:href="@{/admin/}" class="nav-link px-0 align-middle">
 									<i class="fs-4 bi-speedometer2"></i> <span
-										class="ms-1 d-none d-sm-inline">Clientes</span> </a>
+										class="ms-1 d-none d-sm-inline">Usuarios</span> </a>
 							</li>
 							<li>
 								<a href="view.html" th:href="@{/view/}" class="nav-link px-0 align-middle">
@@ -53,7 +48,7 @@
 						</ul>
 					</div>
 				</div>
-				<div id="menu">
+				<div id="menu" class="col">
 					<a th:href="@{/index}">Inicio</a> | <a th:href="@{/reserva/nuevo}">Nueva reserva</a>
 					<br /><br />
 
@@ -62,22 +57,24 @@
 						<thead>
 							<tr>
 								<th>Id</th>
-								<th>Nombre</th>
-								<th>Email</th>
+								<th>Username</th>
 								<th>Fecha</th>
 								<th>Tipo Evento</th>
+								<th>Menú</th>
 								<th>Lugar</th>
-								<th class="w-25">Operaciones</th>
+								<th>Invitados</th>
+								<th>Operaciones</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="reserva : ${lista}">
 								<td th:text="${reserva.cod_reserva}">1</td>
-								<td th:text="${reserva.nombre}">Nombre</td>
-								<td th:text="${reserva.email}">Apellidos</td>
-								<td th:text="${reserva.fecha}">Email</td>
-								<td th:text="${reserva.tipo_evento}">Dni</td>
-								<td th:text="${reserva.lugar_evento}">Telefono</td>
+								<td th:text="${usuario.username}">Nombre</td>
+								<td th:text="${reserva.fecha}">Fecha</td>
+								<td th:text="${reserva.tipo_evento}">Tipo Evento</td>
+								<td th:text="${menu.nombre}">Menú</td>
+								<td th:text="${reserva.lugar_evento}">Lugar</td>
+								<td th:text="${reserva.num_personas}">Invitados</td>
 
 								<td>
 									<a href="#" th:href="@{/reserva/editar/{id}(id=${reserva.cod_reserva})}"><img

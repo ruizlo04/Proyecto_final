@@ -34,7 +34,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="mynavbar">
-					<ul class="navbar-nav ml-auto"> 
+					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
 							<a class="nav-link" th:href="@{/admin/}"
 								sec:authorize="hasRole('ROLE_ADMIN')">Administrar</a>
@@ -42,12 +42,12 @@
 						<li class="nav-item">
 							<b><a class="nav-link" href="portada.html" th:href="@{/index/}">Inicio</a></b>
 						</li>
-<!--						<li class="nav-item">-->
-<!--							<a class="nav-link" href="eventos.html" th:href="@{/user/eventos}">Eventos</a>-->
-<!--						</li>-->
-<!--						<li class="nav-item">-->
-<!--							<a class="nav-link" href="bodas.html" th:href="@{/user/bodas}">Bodas</a>-->
-<!--						</li>-->
+						<!--						<li class="nav-item">-->
+						<!--							<a class="nav-link" href="eventos.html" th:href="@{/user/eventos}">Eventos</a>-->
+						<!--						</li>-->
+						<!--						<li class="nav-item">-->
+						<!--							<a class="nav-link" href="bodas.html" th:href="@{/user/bodas}">Bodas</a>-->
+						<!--						</li>-->
 						<li class="nav-item">
 							<a class="nav-link" href="nuevaReserva.html" th:href="@{/user/nuevaReserva}"
 								sec:authorize="hasRole('ROLE_USER')">Mis reservas</a>
@@ -138,17 +138,17 @@
 
 		<div class="img2" data-aos="flip-left">
 			<section class="container2">
-				<a class="nav-link" href="eventos.html" th:href="@{/user/eventos/}"><button class="btn"><img
-							class="img3" href="javascript:void(0)" src="/img/catering5.jpg" alt="Catering 5">
-						<p>EVENTOS</p>
-					</button></a>
+				<img class="img3" href="javascript:void(0)" src="/img/catering5.jpg"
+						alt="Catering 5">
+					<p>EVENTOS</p>
+					</button>
 			</section>
 
 			<section class="container2">
-				<a class="nav-link" href="bodas.html" th:href="@{/user/bodas/}"><button class="btn"><img class="img3"
-							href="javascript:void(0)" src="/img/catering5.jpg" alt="Catering 5">
-						<p>BODAS</p>
-					</button></a>
+				<img class="img3" href="javascript:void(0)" src="/img/catering5.jpg"
+						alt="Catering 5">
+					<p>BODAS</p>
+					</button>
 
 			</section>
 
