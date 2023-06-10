@@ -49,3 +49,16 @@ INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_event
 INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 8', 'reserva8@example.com', '2023-11-20', 'Cumpleaños', 'Jardín');
 INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 9', 'reserva9@example.com', '2023-12-05', 'Conferencia', 'Hotel');
 INSERT INTO reserva (cod_reserva, nombre, email, fecha, tipo_evento, lugar_evento) VALUES (DEFAULT, 'Reserva 10', 'reserva10@example.com', '2023-12-25', 'Reunión corporativa', 'Oficina');
+
+INSERT INTO reservas (cod_reserva, username, fecha, tipo_evento, menu, lugar_evento, num_personas)
+VALUES
+  (DEFAULT, 'username1', CURDATE(), 'bodas', 'Menú Ejecutivo', 'Lugar 1', 50),
+  (DEFAULT, 'username2', CURDATE(), 'coktail', 'Menú Vegetariano', 'Lugar 2', 80),
+  (DEFAULT, 'username3', CURDATE(), 'comunión', 'Menú Infantil', 'Lugar 3', 30),
+  (DEFAULT, 'username4', CURDATE(), 'bodas', 'Menú Mediterráneo', 'Lugar 4', 150),
+  (DEFAULT, 'username5', CURDATE(), 'coktail', 'Menú Italiano', 'Lugar 5', 70),
+  (DEFAULT, 'username6', CURDATE(), 'comunión', 'Menú Buffet', 'Lugar 6', 120),
+  (DEFAULT, 'username7', CURDATE(), 'bodas', 'Menú BBQ', 'Lugar 7', 200),
+  (DEFAULT, 'username8', CURDATE(), 'coktail', 'Menú de Mariscos', 'Lugar 8', 90),
+  (DEFAULT, 'username9', CURDATE(), 'comunión', 'Menú Saludable', 'Lugar 9', 40),
+  (DEFAULT, 'username10', CURDATE(), 'bodas', 'Menú Gourmet', 'Lugar 10', 180);

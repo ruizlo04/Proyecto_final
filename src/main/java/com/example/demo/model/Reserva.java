@@ -33,8 +33,6 @@ public class Reserva {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long cod_reserva;
 	
-	private String nombre;
-	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fecha;
 	
@@ -55,15 +53,16 @@ public class Reserva {
 	@EqualsAndHashCode.Exclude 
 	private Menu menu;
 
-	public Reserva(long cod_reserva, String nombre, LocalDate fecha, String tipo_evento,
-			String lugar_evento, int num_personas) {
+	public Reserva(long cod_reserva, LocalDate fecha, String tipo_evento, String lugar_evento, Usuario usuario,
+			int num_personas, Menu menu) {
 		super();
 		this.cod_reserva = cod_reserva;
-		this.nombre = nombre;
 		this.fecha = fecha;
 		this.tipo_evento = tipo_evento;
 		this.lugar_evento = lugar_evento;
+		this.usuario = usuario;
 		this.num_personas = num_personas;
+		this.menu = menu;
 	}
 	
 	public double calcularTotal() {
@@ -77,4 +76,5 @@ public class Reserva {
 		}
 		
 	}
+
 }

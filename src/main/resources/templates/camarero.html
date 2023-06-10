@@ -23,14 +23,9 @@
 					</a>
 					<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
 						id="menu">
-						<li class="nav-item">
-							<a href="index.html" th:href="@{/index}" class="nav-link align-middle px-0">
-								<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
-							</a>
-						</li>
 						<li>
 							<a href="admin.html" th:href="@{/admin/}" class="nav-link align-middle px-0">
-								<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Clientes</span>
+								<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span>
 							</a>
 						</li>
 						<li>
@@ -51,7 +46,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="menu">
+			<div id="menu" class="col">
 				<a th:href="@{/index}">Inicio</a> | <a th:href="@{/camarero/nuevoCamarero}">Nuevo camarero</a>
 				<br /><br />
 
@@ -64,7 +59,7 @@
 							<th>Apellidos</th>
 							<th>Dni</th>
 							<th>Teléfono</th>
-							<th class="w-25">Operaciones</th>
+							<th>Operaciones</th>
 						</tr>
 					</thead>
 					<tbody>
