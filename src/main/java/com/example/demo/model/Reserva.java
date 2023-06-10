@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-import java.time.LocalDate; 
+import java.time.LocalDate;  
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -42,8 +42,7 @@ public class Reserva {
 	private String lugar_evento;
 	
 	@ManyToOne
-	@Cascade(CascadeType.SAVE_UPDATE)
-	@JoinColumn(name = "id")
+	@JoinColumn(foreignKey = @ForeignKey(name="fk_res_usu"))
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
 	private Usuario usuario;
