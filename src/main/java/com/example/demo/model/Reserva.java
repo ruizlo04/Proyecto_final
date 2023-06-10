@@ -40,7 +40,7 @@ public class Reserva {
 	private String lugar_evento;
 	
 	@ManyToOne
-	@JoinColumn(foreignKey = @ForeignKey(name="fk_res_usu"))
+	@JoinColumn(name = "id")
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
 	private Usuario usuario;

@@ -78,7 +78,7 @@ public class MenuController {
 	
 	public String submitMenu(@ModelAttribute("menuForm") Menu menu, Model model) {
 
-		model.addAttribute("view", menu);
+		model.addAttribute("menu", menu);
 
 		return "view";
 	}
