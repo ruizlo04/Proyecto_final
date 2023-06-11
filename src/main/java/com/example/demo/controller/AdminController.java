@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.service.UsuarioServicio;
 import com.example.demo.model.Usuario;
 import com.example.demo.service.MenuServicio;
+import com.example.demo.service.ReservaServicio;
 
 @Controller
 @RequestMapping("/admin/")
@@ -21,23 +22,26 @@ public class AdminController {
 	
 	@Autowired
 	private UsuarioServicio usuarioServicio;
+	
+	@Autowired
+	private ReservaServicio reservaServicio;
 
 	@GetMapping({ "/", "/list" })
-	public String listarTodos(Model model) {
+	public String Menus(Model model) {
 		model.addAttribute("menuList", menuServicio.findAll());	
 		return "admin";
 	}
 	
-	@GetMapping("/hazteUsuario")
-	public String hazteUser(Model model) {
-		model.addAttribute("usuario", new Usuario());
-		return "hazteUsuario";
+	@GetMapping({ "/", "/listUsu" })
+	public String Usuarios(Model model) {
+		model.addAttribute("usuarioList", usuarioServicio.findAll());	
+		return "admin";
 	}
 	
-	@PostMapping("/hazteUsuario/submit")
-	public String procesarHacerteUser(@ModelAttribute("usuario") Usuario u) {
-		usuarioServicio.add(u);
-		return "redirect:/admin/"; 
+	@GetMapping({ "/", "/listRes" })
+	public String Reservas(Model model) {
+		model.addAttribute("reservaList", reservaServicio.findAll());	
+		return "admin";
 	}
 	
 	

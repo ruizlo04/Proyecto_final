@@ -1,8 +1,9 @@
 package com.example.demo.model;
 
-import java.util.Collection;  
+import java.util.Collection;   
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -42,9 +42,9 @@ public class Usuario implements UserDetails{
 	
 	@OneToMany(
 			mappedBy = "usuario", 
-			fetch = FetchType.EAGER
+			fetch = FetchType.EAGER,
+			cascade = CascadeType.ALL
 			)
-	@Cascade({CascadeType.SAVE_UPDATE})
 	private List<Reserva> reservas;
 	
 	@Override

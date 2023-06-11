@@ -13,6 +13,7 @@ import com.example.demo.model.Usuario;
 import com.example.demo.model.Reserva;
 import com.example.demo.service.MenuServicio;
 import com.example.demo.service.ReservaServicio;
+import com.example.demo.service.UsuarioServicio;
 
 @Controller
 @RequestMapping("/reserva")
@@ -23,6 +24,9 @@ public class ReservaController {
 	
 	@Autowired
 	private MenuServicio menuServicio;
+	
+	@Autowired
+	private UsuarioServicio usuarioServicio;
 
 	public ReservaController(ReservaServicio reservaServicio) {
 		super();
@@ -70,9 +74,10 @@ public class ReservaController {
 		// para pintar la lista actualizada con la modificación hecha
 	}
 	
-	@GetMapping("/nuevaReserva")
+	@GetMapping("/nuevaReserva/{id}")
 	public String mostrarFormularioUser(Model model) {
 		model.addAttribute("menus",menuServicio.findAll());
+		model.addAttribute("usuario", usuarioServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
 		return "nuevaReserva";
 	}
