@@ -83,9 +83,10 @@ public class ReservaController {
 	}
 	
 	@PostMapping("/nuevaReserva/submit")
-	public String procesarFormularioUser(@ModelAttribute("reserva") Reserva r) {
-		reservaServicio.add(r);
-		return "redirect:/reserva"; 
+	public String procesarFormularioUser(@ModelAttribute("reserva") Reserva r, @ModelAttribute("usuario") Usuario u) {
+	    r.setUsuario(u);
+	    reservaServicio.guardarReservaConUsuario(r);
+	    return "redirect:/index/"; 
 	}
 
 	@GetMapping("/borrar/{id}")

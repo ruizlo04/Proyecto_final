@@ -26,22 +26,22 @@ public class AdminController {
 	@Autowired
 	private ReservaServicio reservaServicio;
 
-	@GetMapping({ "/", "/list" })
+	@GetMapping("/menus")
 	public String Menus(Model model) {
-		model.addAttribute("menuList", menuServicio.findAll());	
-		return "admin";
+	    model.addAttribute("menuList", menuServicio.findAll());    
+	    return "admin";
 	}
-	
-	@GetMapping({ "/", "/listUsu" })
+
+	@GetMapping("/usuarios")
 	public String Usuarios(Model model) {
-		model.addAttribute("usuarioList", usuarioServicio.findAll());	
-		return "admin";
+	    model.addAttribute("usuarioList", usuarioServicio.findAll());    
+	    return "admin";
 	}
-	
-	@GetMapping({ "/", "/listRes" })
+
+	@GetMapping("/reservas")
 	public String Reservas(Model model) {
-		model.addAttribute("reservaList", reservaServicio.findAll());	
-		return "admin";
+	    model.addAttribute("reservaList", reservaServicio.findAll());    
+	    return "admin";
 	}
 	
 	

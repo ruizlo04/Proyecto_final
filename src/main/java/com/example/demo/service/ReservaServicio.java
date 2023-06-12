@@ -2,10 +2,12 @@ package com.example.demo.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.Menu;
 import com.example.demo.model.Reserva;
+import com.example.demo.model.Usuario;
 import com.example.demo.repository.ReservaRepository;
 
 
@@ -24,7 +26,9 @@ public class ReservaServicio {
 	 * @param c el Cliente a insertar
 	 * @return El cliente ya insertado (con el Id no vacío).
 	 */
-	public Reserva add(Reserva r) { return reservaRepository.save(r); }
+	public Reserva add(Reserva r) { 
+		return reservaRepository.save(r); 
+		}
 	
 	
 	/**
@@ -53,7 +57,6 @@ public class ReservaServicio {
 	 */
 	public List<Reserva> findAll() { return reservaRepository.findAll(); }
 	
-	
 	/**
 	 * Devuelve un cliente en base a su Id
 	 * @param id
@@ -63,5 +66,9 @@ public class ReservaServicio {
 		return reservaRepository.findById(id).orElse(null);
 	}
 	
+	@Transactional
+	public void guardarReservaConUsuario(Reserva reserva) {
+		reservaRepository.guardarReservaConUsuario(reserva);
+	}
 
 }
