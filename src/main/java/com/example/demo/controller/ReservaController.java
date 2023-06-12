@@ -1,6 +1,12 @@
 package com.example.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;  
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +41,17 @@ public class ReservaController {
 	
 	@GetMapping({ "/", "/list" })
 	public String listarTodos(Model model) {
-		model.addAttribute("lista", reservaServicio.findAll());
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String currentUserName  = authentication.getName();
+		System.out.println(currentUserName);
+		
+		Usuario currentUser = usuarioServicio.findByUsername(currentUserName );
+		List<Reserva> listaReservas = new ArrayList<>();
+		listaReservas = reservaServicio.findByNombre(currentUser.getId());
+//				.map(List::of).orElseGet(Collections::emptyList);
+
+		System.out.println(listaReservas.size());
+		model.addAttribute("lista", listaReservas);
 		return "reserva";
 	}
 	
@@ -74,17 +90,37 @@ public class ReservaController {
 		// para pintar la lista actualizada con la modificación hecha
 	}
 	
-	@GetMapping("/nuevaReserva/{id}")
+	@GetMapping("/nuevaReserva")
 	public String mostrarFormularioUser(Model model) {
 		model.addAttribute("menus",menuServicio.findAll());
-		model.addAttribute("usuario", usuarioServicio.findAll());
+//		model.addAttribute("usuario", usuarioServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
+		
+//		System.out.println("por aqui");
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String currentUserName  = authentication.getName();
+//		System.out.println(currentUserName);
+		
+		Usuario currentUser = usuarioServicio.findByUsername(currentUserName );
+		List<Reserva> listaReservas = new ArrayList<>();
+		listaReservas = reservaServicio.findByNombre(currentUser.getId());
+//				.map(List::of).orElseGet(Collections::emptyList);
+
+		System.out.println(listaReservas.size());
+		model.addAttribute("lista", listaReservas);
 		return "nuevaReserva";
 	}
 	
 	@PostMapping("/nuevaReserva/submit")
 	public String procesarFormularioUser(@ModelAttribute("reserva") Reserva r, @ModelAttribute("usuario") Usuario u) {
-	    r.setUsuario(u);
+		
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String currentUserName  = authentication.getName();
+		Usuario currentUser = usuarioServicio.findByUsername(currentUserName );
+		
+//		UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+		
+	    r.setUsuario(currentUser);
 	    reservaServicio.guardarReservaConUsuario(r);
 	    return "redirect:/index/"; 
 	}

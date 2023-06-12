@@ -72,6 +72,15 @@ public class UsuarioServicio {
 		return usuarioRepository.findById(id).orElse(null);
 	}
 	
+	/**
+	 * Devuelve un usuario en base a su Id
+	 * @param id
+	 * @return el usuario encontrado o <code>null</code>
+	 */
+	public Usuario findByUsername(String username) {
+		return usuarioRepository.findFirstByUsername(username).get();
+	}
+	
 	@Transactional
 	public void guardarReserva(Reserva reserva, Usuario usuario) {
 	    if (usuario.getId() == null) {

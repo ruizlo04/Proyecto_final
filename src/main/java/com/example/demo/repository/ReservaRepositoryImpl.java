@@ -17,14 +17,18 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.model.Reserva;
+import com.example.demo.model.Usuario;
 
 @Repository
 @Transactional
 @Primary
-public class ReservaRepositoryImpl implements ReservaRepository {
+public class ReservaRepositoryImpl implements ReservaRepository{
+	
+	private ReservaRepository reservaRepository;
     
     @PersistenceContext
     private EntityManager entityManager;
+    
 
     // Implementación de los métodos de ReservaRepository
     
@@ -213,4 +217,11 @@ public class ReservaRepositoryImpl implements ReservaRepository {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Reserva> findByUsuario(Long idCurrentUser) {
+		return null;
+//		return reservaRepository.findByUsuario(idCurrentUser);
+	}
+
 }

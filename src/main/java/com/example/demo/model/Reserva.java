@@ -66,13 +66,12 @@ public class Reserva {
 	}
 	
 	public double calcularTotal() {
-		double total = 0.0;
 		double descuento = 10;
 		double cien = 100;
-		if (num_personas > 25) {
-			return total = menu.getPrecio() * num_personas;
+		if (getNum_personas() < 25) {
+			return  menu.getPrecio() * getNum_personas();
 		} else {
-			return total = ((menu.getPrecio() * num_personas) * descuento) / cien;
+			return ((menu.getPrecio() * getNum_personas()) * descuento) / cien;
 		}
 		
 	}

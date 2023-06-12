@@ -33,7 +33,7 @@
 									<thead>
 										<tr>
 											<th>Id</th>
-											<th>Nombre</th>
+											<th style="visibility:collapse; display:none;">Username</th>
 											<th>Fecha</th>
 											<th>Tipo</th>
 											<th>Menú</th>
@@ -46,17 +46,17 @@
 									<tbody>
 										<tr th:each="reserva : ${lista}">
 											<td th:text="${reserva.cod_reserva}">1</td>
-											<td th:text="${usuario.username}">Nombre</td>
+											<td style="visibility:collapse; display:none;" th:text="${reserva.usuario.username}">Username</td>
 											<td th:text="${reserva.fecha}">Fecha</td>
 											<td th:text="${reserva.tipo_evento}">Tipo evento</td>
-											<td th:text="${menu.nombre}">Menú</td>
+											<td th:text="${reserva.menu.nombre}">Menú</td>
 											<td th:text="${reserva.lugar_evento}">Lugar</td>
 											<td th:text="${reserva.num_personas}">Invitados</td>
-											<td th:text="${reserva.calcularTotal}">Total</td>
+											<td th:text="${reserva.calcularTotal()}">Total</td>
 
 											<td>
 												<a href="#"
-													th:href="@{/reserva/editar/{id}(id=${reserva.cod_reserva})}"><img
+													th:href="@{/reserva/editar/(id=${reserva.cod_reserva})}"><img
 														class="navbar-brand" href="javascript:void(0)"
 														src="/img/edit.png" alt="Editar" width="5%"></a> |
 												<a href="#"
@@ -74,17 +74,6 @@
 									<form class="form-horizontal"
 										th:action="${reserva.cod_reserva != 0} ? @{/reserva/editar/submit} : @{/reserva/nuevaReserva/submit}"
 										th:object="${reserva}" method="post">
-
-										<div class="d-flex flex-row align-items-center mb-4">
-											<input th:if="${reserva.cod_reserva != 0}" type="hidden" name="id"
-												th:field="*{cod_reserva}" />
-											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
-											<div class="form-outline flex-fill mb-0">
-												<input type="text" id="form3Example1c" name="nombre"
-													placeholder="Nombre usuario" class="form-control"
-													th:field="*{usuario.username}" required/>
-											</div>
-										</div>
 
 										<div class="d-flex flex-row align-items-center mb-4">
 											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
