@@ -48,10 +48,7 @@ public class ReservaController {
 		Usuario currentUser = usuarioServicio.findByUsername(currentUserName );
 		List<Reserva> listaReservas = new ArrayList<>();
 		listaReservas = reservaServicio.findByNombre(currentUser.getId());
-//				.map(List::of).orElseGet(Collections::emptyList);
-
-		System.out.println(listaReservas.size());
-		model.addAttribute("lista", listaReservas);
+		model.addAttribute("lista", reservaServicio.findAll());
 		return "reserva";
 	}
 	
