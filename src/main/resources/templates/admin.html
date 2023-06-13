@@ -55,24 +55,24 @@
 
 				<h1>USUARIOS</h1>
 
-				<table class="table table-dark table-striped">
+				<table class="table">
 					<thead>
 						<tr>
 							<th>Id</th>
 							<th>Nombre</th>
 							<th>Apellido</th>
 							<th>Username</th>
-							<th>password</th>
-							<th>Operaciones</th>
+							<th style="visibility:collapse; display:none;">password</th>
+							<th class="w-25">Operaciones</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="usuario : ${lista}">
+						<tr th:each="usuario : ${usuarioList}">
 							<td th:text="${usuario.id}">1</td>
 							<td th:text="${usuario.nombre}">Nombre</td>
 							<td th:text="${usuario.apellido}">Apellido</td>
 							<td th:text="${usuario.username}">Username</td>
-							<td th:text="${usuario.password}">Passwprd</td>
+							<td style="visibility:collapse; display:none;" th:text="${usuario.password}">Password</td>
 
 							<td>
 								<a href="#" th:href="@{/admin/editar/{id}(id=${usuario.id})}"><img
