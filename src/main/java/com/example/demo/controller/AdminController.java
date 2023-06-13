@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -44,5 +45,33 @@ public class AdminController {
 	    return "admin";
 	}
 	
-	
+
+	@GetMapping("/editar/{id}")
+	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
+
+		Usuario uEditar = usuarioServicio.findById(id);
+
+		if (uEditar != null) {
+			model.addAttribute("usuario", uEditar);
+			return "hazteUsuario";
+		} else {
+			// No existe ningún alumno con el Id proporcionado.
+			// Redirigimos hacia el listado.
+			return "redirect:/admin/";
+		}
+
+	}
+
+	@PostMapping("/editar/submit")
+	public String procesarFormularioEdicion(@ModelAttribute("usuario") Usuario u) {
+		usuarioServicio.edit(u);
+		return "redirect:/admin/";// Volvemos a redirigir la listado a través del controller
+		// para pintar la lista actualizada con la modificación hecha
+	}
+
+	@GetMapping("/borrar/{id}")
+	public String borrar(@PathVariable("id") long id) {
+		usuarioServicio.delete(id);
+		return "redirect:/admin/";
+	}
 }
