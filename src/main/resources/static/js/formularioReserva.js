@@ -1,55 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const reservaForm = document.getElementById("reservaForm");
-  reservaForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+function validarFormulario() {
+  // Obtener los valores de los campos del formulario
+  var fecha = document.getElementById("form3Example4cd").value;
+  var lugar = document.getElementById("lugar").value;
+  var numPersonas = document.getElementById("numPersonas").value;
 
-    // Validar los campos del formulario
-    const nombreUsuario = document.getElementById("form3Example1c").value;
-    const fecha = document.getElementById("form3Example4cd").value;
-    const tipoEvento = document.getElementById("tipoEvento").value;
-    const menu = document.getElementById("menu").value;
-    const lugar = document.getElementById("lugar").value;
-    const numPersonas = document.getElementById("numPersonas").value;
+  // Obtener la fecha actual
+  var fechaActual = new Date().toISOString().split("T")[0];
 
-    if (nombreUsuario === "") {
-      alert("Por favor, ingresa el nombre de usuario");
-      return;
-    }
+  // Validar que la fecha no sea menor a la fecha actual
+  if (fecha < fechaActual) {
+    alert("La fecha debe ser igual o mayor a la fecha actual.");
+    return false;
+  }
 
-    if (fecha === "") {
-      alert("Por favor, ingresa la fecha");
-      return;
-    }
-    
-    // Validar si la fecha seleccionada es pasada
-    const fechaSeleccionada = new Date(fecha);
-    const fechaActual = new Date();
-    if (fechaSeleccionada < fechaActual) {
-      alert("No se puede seleccionar una fecha pasada");
-      return;
-    }
+  // Validar que el lugar no contenga números
+  if (/\d/.test(lugar)) {
+    alert("El lugar no debe contener números.");
+    return false;
+  }
 
-    if (tipoEvento === "") {
-      alert("Por favor, selecciona el tipo de evento");
-      return;
-    }
+  // Validar que el número de personas esté entre 1 y 1000
+  if (numPersonas < 1 || numPersonas > 1000) {
+    alert("El número de personas debe estar entre 1 y 1000.");
+    return false;
+  }
 
-    if (menu === "") {
-      alert("Por favor, selecciona un menú");
-      return;
-    }
-
-    if (lugar === "") {
-      alert("Por favor, ingresa el lugar del evento");
-      return;
-    }
-
-    if (numPersonas === "") {
-      alert("Por favor, ingresa el número de personas");
-      return;
-    }
-
-    // Si todos los campos son válidos, puedes enviar el formulario
-    reservaForm.submit();
-  });
-});
+  // Si todos los campos son válidos, enviar el formulario
+  return true;
+}

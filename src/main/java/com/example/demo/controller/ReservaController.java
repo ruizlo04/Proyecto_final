@@ -24,44 +24,53 @@ import com.example.demo.service.UsuarioServicio;
 @Controller
 @RequestMapping("/reserva")
 public class ReservaController {
-	
+
 	@Autowired
 	private ReservaServicio reservaServicio;
-	
+
 	@Autowired
 	private MenuServicio menuServicio;
-	
+
 	@Autowired
 	private UsuarioServicio usuarioServicio;
 
-	public ReservaController(ReservaServicio reservaServicio) {
-		super();
-		this.reservaServicio = reservaServicio;
-	}
-	
 	@GetMapping({ "/", "/list" })
 	public String listarTodos(Model model) {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String currentUserName  = authentication.getName();
-		System.out.println(currentUserName);
-		
-		Usuario currentUser = usuarioServicio.findByUsername(currentUserName );
-		List<Reserva> listaReservas = new ArrayList<>();
-		listaReservas = reservaServicio.findByNombre(currentUser.getId());
 		model.addAttribute("lista", reservaServicio.findAll());
 		return "reserva";
 	}
-	
-	@GetMapping("/nuevo")
-	public String mostrarFormulario(Model model) {
+
+	@GetMapping("/nueva")
+	public String mostrarFormRes(Model model) {
+		model.addAttribute("menus", menuServicio.findAll());
+//		model.addAttribute("usuario", usuarioServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
-		return "registro";
+
+//		System.out.println("por aqui");
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String currentUserName = authentication.getName();
+//		System.out.println(currentUserName);
+
+		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
+		List<Reserva> listaReservas = new ArrayList<>();
+		listaReservas = reservaServicio.findByNombre(currentUser.getId());
+//				.map(List::of).orElseGet(Collections::emptyList);
+
+		System.out.println(listaReservas.size());
+		model.addAttribute("lista", listaReservas);
+		return "reservaAdmin";
 	}
-	
-	@PostMapping("/nuevo/submit")
-	public String procesarFormulario(@ModelAttribute("reserva") Reserva r) {
-		reservaServicio.add(r);
-		return "redirect:/reserva";
+
+	@PostMapping("/nueva/submit")
+	public String procesarFormRes(@ModelAttribute("reserva") Reserva r, @ModelAttribute("usuario") Usuario u) {
+
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String currentUserName = authentication.getName();
+		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
+
+		r.setUsuario(currentUser);
+		reservaServicio.guardarReservaConUsuario(r);
+		return "redirect:/reserva/";
 	}
 
 	@GetMapping("/editar/{id}")
@@ -86,19 +95,19 @@ public class ReservaController {
 		return "redirect:/reserva/";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
 	}
-	
+
 	@GetMapping("/nuevaReserva")
 	public String mostrarFormularioUser(Model model) {
-		model.addAttribute("menus",menuServicio.findAll());
+		model.addAttribute("menus", menuServicio.findAll());
 //		model.addAttribute("usuario", usuarioServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
-		
+
 //		System.out.println("por aqui");
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String currentUserName  = authentication.getName();
+		String currentUserName = authentication.getName();
 //		System.out.println(currentUserName);
-		
-		Usuario currentUser = usuarioServicio.findByUsername(currentUserName );
+
+		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
 		List<Reserva> listaReservas = new ArrayList<>();
 		listaReservas = reservaServicio.findByNombre(currentUser.getId());
 //				.map(List::of).orElseGet(Collections::emptyList);
@@ -107,19 +116,17 @@ public class ReservaController {
 		model.addAttribute("lista", listaReservas);
 		return "nuevaReserva";
 	}
-	
+
 	@PostMapping("/nuevaReserva/submit")
 	public String procesarFormularioUser(@ModelAttribute("reserva") Reserva r, @ModelAttribute("usuario") Usuario u) {
-		
+
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String currentUserName  = authentication.getName();
-		Usuario currentUser = usuarioServicio.findByUsername(currentUserName );
-		
-//		UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-		
-	    r.setUsuario(currentUser);
-	    reservaServicio.guardarReservaConUsuario(r);
-	    return "redirect:/index/"; 
+		String currentUserName = authentication.getName();
+		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
+
+		r.setUsuario(currentUser);
+		reservaServicio.guardarReservaConUsuario(r);
+		return "redirect:/index/";
 	}
 
 	@GetMapping("/borrar/{id}")
@@ -144,6 +151,5 @@ public class ReservaController {
 
 		return "view";
 	}
-	
 
 }
