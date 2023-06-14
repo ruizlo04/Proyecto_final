@@ -23,6 +23,15 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * Esta clase se encarga de indicar los atributos que debe tener una reserva. Tiene dos asociaciones:
+ * Una asosiación con usuario, debido a que a cada reserva está asociado un usuario concreto, tambien tiene
+ * una asociación con menu debido a que a cada reserva se le asigna un menú. Además tiene un método para calcular
+ * el precio final de la reserva.
+ * @author carlos ruiz
+ *
+ */
+
 @Entity
 @Data 
 @NoArgsConstructor
@@ -65,6 +74,12 @@ public class Reserva {
 		this.menu = menu;
 	}
 	
+	/**
+	 * Este método se encarga de calcular el precio total de una reserva. Si el número de personas es menor a 25
+	 * devulve el precio del menú multiplicado por el número de personas, sino, devuelve el precio por las personas 
+	 * pero se le aplica un 10%.
+	 * @return Devuleve el precio dependiendo del número de personas.
+	 */
 	public double calcularTotal() {
 		double descuento = 90;
 		double cien = 100;

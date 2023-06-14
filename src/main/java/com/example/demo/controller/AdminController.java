@@ -96,15 +96,12 @@ public class AdminController {
 		model.addAttribute("menus", menuServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
 
-//		System.out.println("por aqui");
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		String currentUserName = authentication.getName();
-//		System.out.println(currentUserName);
 
 		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
 		List<Reserva> listaReservas = new ArrayList<>();
 		listaReservas = reservaServicio.findByNombre(currentUser.getId());
-//				.map(List::of).orElseGet(Collections::emptyList);
 
 		System.out.println(listaReservas.size());
 		model.addAttribute("lista", listaReservas);

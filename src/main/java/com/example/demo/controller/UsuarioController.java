@@ -31,21 +31,21 @@ public class UsuarioController {
 		return "admin";
 	}
 
-	@GetMapping("/nuevo")
-	public String mostrarFormulario(Model model) {
-		model.addAttribute("usuario", new Usuario());
-		return "formulario";
-	}
+//	@GetMapping("/nuevo")
+//	public String mostrarFormulario(Model model) {
+//		model.addAttribute("usuario", new Usuario());
+//		return "formulario";
+//	}
 	
-	@PostMapping("/nuevo/submit")
-	public String procesarFormulario(@ModelAttribute("usuario") Usuario u) {
-		System.out.println(u.getPassword());
-		String passEncripted = new BCryptPasswordEncoder().encode(u.getPassword());
-		System.out.println(passEncripted);
-		u.setPassword(passEncripted);
-		usuarioServicio.add(u);
-		return "redirect:/index/";
-	}
+//	@PostMapping("/nuevo/submit")
+//	public String procesarFormulario(@ModelAttribute("usuario") Usuario u) {
+//		System.out.println(u.getPassword());
+//		String passEncripted = new BCryptPasswordEncoder().encode(u.getPassword());
+//		System.out.println(passEncripted);
+//		u.setPassword(passEncripted);
+//		usuarioServicio.add(u);
+//		return "redirect:/index/";
+//	}
 
 	@GetMapping("/editar/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
@@ -56,8 +56,6 @@ public class UsuarioController {
 			model.addAttribute("usuario", uEditar);
 			return "formulario";
 		} else {
-			// No existe ningún alumno con el Id proporcionado.
-			// Redirigimos hacia el listado.
 			return "redirect:/admin/";
 		}
 
@@ -66,8 +64,7 @@ public class UsuarioController {
 	@PostMapping("/editar/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("usuario") Usuario u) {
 		usuarioServicio.edit(u);
-		return "redirect:/index/";// Volvemos a redirigir la listado a través del controller
-		// para pintar la lista actualizada con la modificación hecha
+		return "redirect:/index/";
 	}
 
 	@GetMapping("/borrar/{id}")
@@ -92,8 +89,18 @@ public class UsuarioController {
 		return "hazteUsuario";
 	}
 	
+	
+	/**
+	 * Este método se encarga re enviar un formulario de creación de usuario con la contraseña encriptada
+	 * @param u Se le pasa el usuaurio
+	 * @return El usuario con la contraseña encriptada y te envía a el índíce
+	 */
 	@PostMapping("/hazteUsuario/submit")
 	public String procesarHacerteUser(@ModelAttribute("usuario") Usuario u) {
+		System.out.println(u.getPassword());
+		String passEncripted = new BCryptPasswordEncoder().encode(u.getPassword());
+		System.out.println(passEncripted);
+		u.setPassword(passEncripted);
 		usuarioServicio.add(u);
 		return "redirect:/index/"; 
 	}

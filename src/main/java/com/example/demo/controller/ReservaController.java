@@ -40,39 +40,6 @@ public class ReservaController {
 		return "reserva";
 	}
 
-	@GetMapping("/nueva")
-	public String mostrarFormRes(Model model) {
-		model.addAttribute("menus", menuServicio.findAll());
-//		model.addAttribute("usuario", usuarioServicio.findAll());
-		model.addAttribute("reserva", new Reserva());
-
-//		System.out.println("por aqui");
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String currentUserName = authentication.getName();
-//		System.out.println(currentUserName);
-
-		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
-		List<Reserva> listaReservas = new ArrayList<>();
-		listaReservas = reservaServicio.findByNombre(currentUser.getId());
-//				.map(List::of).orElseGet(Collections::emptyList);
-
-		System.out.println(listaReservas.size());
-		model.addAttribute("lista", listaReservas);
-		return "reservaAdmin";
-	}
-
-	@PostMapping("/nueva/submit")
-	public String procesarFormRes(@ModelAttribute("reserva") Reserva r, @ModelAttribute("usuario") Usuario u) {
-
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String currentUserName = authentication.getName();
-		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
-
-		r.setUsuario(currentUser);
-		reservaServicio.guardarReservaConUsuario(r);
-		return "redirect:/reserva/";
-	}
-
 	@GetMapping("/editar/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long cod_reserva, Model model) {
 
@@ -82,8 +49,6 @@ public class ReservaController {
 			model.addAttribute("reserva", rEditar);
 			return "registro";
 		} else {
-			// No existe ningún alumno con el Id proporcionado.
-			// Redirigimos hacia el listado.
 			return "redirect:/reserva";
 		}
 
@@ -92,30 +57,38 @@ public class ReservaController {
 	@PostMapping("/editar/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("reserva") Reserva r) {
 		reservaServicio.edit(r);
-		return "redirect:/reserva/";// Volvemos a redirigir la listado a través del controller
-		// para pintar la lista actualizada con la modificación hecha
+		return "redirect:/reserva/";
 	}
 
+	/**
+	 * Este método se encarga de realizar una nueva reserva comprobando el usuario que esté realizando esa reserva
+	 * @param model
+	 * @return devuelve la página para realizar la reserva
+	 */
 	@GetMapping("/nuevaReserva")
 	public String mostrarFormularioUser(Model model) {
 		model.addAttribute("menus", menuServicio.findAll());
-//		model.addAttribute("usuario", usuarioServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
 
-//		System.out.println("por aqui");
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		String currentUserName = authentication.getName();
-//		System.out.println(currentUserName);
 
 		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
 		List<Reserva> listaReservas = new ArrayList<>();
 		listaReservas = reservaServicio.findByNombre(currentUser.getId());
-//				.map(List::of).orElseGet(Collections::emptyList);
 
 		System.out.println(listaReservas.size());
 		model.addAttribute("lista", listaReservas);
 		return "nuevaReserva";
 	}
+	
+	/**
+	 * Este método sirve para enviar el formulario de reserva comprobando la autenticación del usuario
+	 * que esté realizando la reserva
+	 * @param r Se le pasa una reserva para guardar
+	 * @param u Se le pasa un usuario para realizar la reserva
+	 * @return devulve la reserva realizada y te devuelve al índice
+	 */
 
 	@PostMapping("/nuevaReserva/submit")
 	public String procesarFormularioUser(@ModelAttribute("reserva") Reserva r, @ModelAttribute("usuario") Usuario u) {

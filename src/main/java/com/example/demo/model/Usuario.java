@@ -24,6 +24,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * Esta clase indica los atributos que debe tener un usuario para crearlo, además,
+ * tiene métodos sobreescritos debido a la implementación con la clase UserDetails.
+ * @author carlos ruiz
+ *
+ */
+
 @Entity
 @Data
 @NoArgsConstructor

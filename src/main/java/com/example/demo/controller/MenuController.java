@@ -34,7 +34,7 @@ public class MenuController {
 	@PostMapping("/nuevoMenu/submitMenu")
 	public String procesarFormulario(@ModelAttribute("menu") Menu m) {
 		menuServicio.add(m);
-		return "redirect:/view/";// Podría ser también return "redirect:/list
+		return "redirect:/view/";
 	}
 	
 	@GetMapping("/editarMenu/{id}")
@@ -46,8 +46,7 @@ public class MenuController {
 			model.addAttribute("menu", mEditar);
 			return "form";
 		} else {
-			// No existe ningún alumno con el Id proporcionado.
-			// Redirigimos hacia el listado.
+			
 			return "redirect:/view/";
 		}
 
@@ -56,8 +55,7 @@ public class MenuController {
 	@PostMapping("/editarMenu/submitMenu")
 	public String procesarFormularioEdicion(@ModelAttribute("menu") Menu m) {
 		menuServicio.edit(m);
-		return "redirect:/view/";// Volvemos a redirigir la listado a través del controller
-		// para pintar la lista actualizada con la modificación hecha
+		return "redirect:/view/";
 	}
 	
 	@GetMapping("/borrarMenu/{id}")
