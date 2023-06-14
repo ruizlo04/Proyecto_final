@@ -35,7 +35,7 @@
 									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Realizar reserva</p>
 
 									<form class="form-horizontal"
-										th:action="${reserva.cod_reserva != 0} ? @{/reserva/editar/submit} : @{/reserva/nueva/submit}"
+										th:action="${reserva.cod_reserva != 0} ? @{/admin/editarReserva/submit} : @{/admin/nueva/submit}"
 										th:object="${reserva}" method="post"  onsubmit="return validarFormulario();">
 
 										<div class="d-flex flex-row align-items-center mb-4">

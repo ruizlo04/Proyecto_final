@@ -44,7 +44,7 @@ public class UsuarioController {
 		System.out.println(passEncripted);
 		u.setPassword(passEncripted);
 		usuarioServicio.add(u);
-		return "redirect:/index/";// Podría ser también return "redirect:/list
+		return "redirect:/index/";
 	}
 
 	@GetMapping("/editar/{id}")
