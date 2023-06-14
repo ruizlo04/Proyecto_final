@@ -10,6 +10,7 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="../css/estilos.css" th:href="@{/css/estilos.css}" />
+	<script src="/js/formularioCamareros.js"></script>
 </head>
 
 <body id="menugrande">
@@ -23,7 +24,7 @@
 				<div class="well well-sm">
 					<form class="form-horizontal"
 						th:action="${camareros.cod_camarero != 0} ? @{/camarero/editar/submit} : @{/camarero/nuevoCamarero/submit}"
-						th:object="${camareros}" method="post">
+						th:object="${camareros}" method="post" onsubmit="return validarFormulario();">
 						<fieldset>
 
 							<div class="form-group">

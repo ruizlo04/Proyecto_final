@@ -51,5 +51,4 @@ public class Menu {
 		return this.nombre.concat(" - ").concat(Double.toString(this.getPrecio())); 
 	}
 	
-	
 }
