@@ -78,10 +78,10 @@
 							<td th:text="${reserva.calcularTotal()}">Total</td>
 
 							<td>
-								<a href="#" th:href="@{/reserva/editar/(id=${reserva.cod_reserva})}"><img
+								<a href="#" th:href="@{/admin/editarReserva/(id=${reserva.cod_reserva})}"><img
 										class="navbar-brand" href="javascript:void(0)" src="/img/edit.png" alt="Editar"
 										width="5%"></a> |
-								<a href="#" th:href="@{/reserva/borrar/{id}(id=${reserva.cod_reserva})}"><img
+								<a href="#" th:href="@{/admin/borrarReserva/{id}(id=${reserva.cod_reserva})}"><img
 										class="navbar-brand" href="javascript:void(0)" src="/img/borrar.png"
 										alt="Borrar" width="5%"></a>
 							</td>

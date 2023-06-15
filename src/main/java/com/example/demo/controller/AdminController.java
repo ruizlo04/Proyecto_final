@@ -42,7 +42,7 @@ public class AdminController {
 
 	@GetMapping("/reservas")
 	public String Reservas(Model model) {
-	    model.addAttribute("reservaList", reservaServicio.findAll());    
+	    model.addAttribute("lista", reservaServicio.findAll());    
 	    return "reserva";
 	}
 	
@@ -137,6 +137,12 @@ public class AdminController {
 	@PostMapping("/editarReserva/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("reserva") Reserva r) {
 		reservaServicio.edit(r);
+		return "redirect:/admin/reservas";
+	}
+	
+	@GetMapping("/borrarReserva/{id}")
+	public String borrarR(@PathVariable("id") long id) {
+		reservaServicio.delete(id);
 		return "redirect:/admin/reservas";
 	}
 

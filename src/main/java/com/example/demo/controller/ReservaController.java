@@ -84,10 +84,10 @@ public class ReservaController {
 	
 	/**
 	 * Este método sirve para enviar el formulario de reserva comprobando la autenticación del usuario
-	 * que esté realizando la reserva
-	 * @param r Se le pasa una reserva para guardar
-	 * @param u Se le pasa un usuario para realizar la reserva
-	 * @return devulve la reserva realizada y te devuelve al índice
+	 * que esté realizando la reserva.
+	 * @param r Se le pasa una reserva para guardar.
+	 * @param u Se le pasa un usuario para realizar la reserva.
+	 * @return devulve la reserva realizada y te devuelve al índice.
 	 */
 
 	@PostMapping("/nuevaReserva/submit")

@@ -34,7 +34,7 @@
 										th:object="${usuario}" method="post">
 
 										<div class="d-flex flex-row align-items-center mb-4">
-											<input th:if="${usuario.id != 0}" type="hidden" name="id" 												th:field="*{id}" />
+											<input th:if="${usuario.id != 0}" type="hidden" name="id" th:field="*{id}" />
 											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
 												<input type="text" id="form3Example1c" name="nombre"
 													placeholder="Nombre" class="form-control"
