@@ -75,7 +75,7 @@
 							<td th:text="${reserva.menu.nombre}">Menú</td>
 							<td th:text="${reserva.lugar_evento}">Lugar</td>
 							<td th:text="${reserva.num_personas}">Invitados</td>
-							<td th:text="${reserva.calcularTotal()}">Total</td>
+							<td th:text="${#numbers.formatDecimal(reserva.calcularTotal(), 1, 2)}">Total</td>
 
 							<td>
 								<a href="#" th:href="@{/admin/editarReserva/(id=${reserva.cod_reserva})}"><img

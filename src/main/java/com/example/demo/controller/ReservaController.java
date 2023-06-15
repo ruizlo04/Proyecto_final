@@ -47,9 +47,9 @@ public class ReservaController {
 
 		if (rEditar != null) {
 			model.addAttribute("reserva", rEditar);
-			return "registro";
+			return "nuevaReserva";
 		} else {
-			return "redirect:/reserva";
+			return "redirect:/index/";
 		}
 
 	}
@@ -57,10 +57,10 @@ public class ReservaController {
 	@PostMapping("/editar/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("reserva") Reserva r) {
 		reservaServicio.edit(r);
-		return "redirect:/reserva/";
+		return "redirect:/index/";
 	}
 
-	/**
+	/** 
 	 * Este método se encarga de realizar una nueva reserva comprobando el usuario que esté realizando esa reserva
 	 * @param model
 	 * @return devuelve la página para realizar la reserva
@@ -105,18 +105,18 @@ public class ReservaController {
 	@GetMapping("/borrar/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		reservaServicio.delete(id);
-		return "redirect:/reserva/";
+		return "redirect:/index/";
 	}
 
-	@GetMapping("/cliente")
-	public String showForm(Model model) {
-
-		Usuario usuario = new Usuario();
-		model.addAttribute("usuarioForm", usuario);
-
-		return "redirect:/registro/";
-
-	}
+//	@GetMapping("/cliente")
+//	public String showForm(Model model) {
+//
+//		Usuario usuario = new Usuario();
+//		model.addAttribute("usuarioForm", usuario);
+//
+//		return "redirect:/registro/";
+//
+//	}
 
 	public String submit(@ModelAttribute("reservaForm") Reserva reserva, Model model) {
 

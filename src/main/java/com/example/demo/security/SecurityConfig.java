@@ -21,16 +21,6 @@ public class SecurityConfig {
 	private final UserDetailsService userDetailsService;
 	private final PasswordEncoder passwordEncoder;
 	
-	/*@Bean
-    public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails user = User.builder()
-        		.username("admin")
-        		.password("{noop}admin")
-        		.roles("ADMIN")
-        	.build();
-        return new InMemoryUserDetailsManager(user);
-    }*/
-	
 	@Bean 
 	public DaoAuthenticationProvider daoAuthenticationProvider() {
 		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -66,8 +56,6 @@ public class SecurityConfig {
 	        .defaultSuccessUrl("/index", true)
 	        .permitAll();
 		
-		// Añadimos esto para poder seguir accediendo a la consola de H2
-		// con Spring Security habilitado.
 		http.csrf().disable();
 		http.headers().frameOptions().disable();
 		

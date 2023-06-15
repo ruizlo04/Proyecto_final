@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.service.UsuarioServicio;
+import com.example.demo.excepcion.ExcepcionReservaVacia;
 import com.example.demo.model.Reserva;
 import com.example.demo.model.Usuario;
 import com.example.demo.service.MenuServicio;
@@ -42,7 +43,10 @@ public class AdminController {
 
 	@GetMapping("/reservas")
 	public String Reservas(Model model) {
-	    model.addAttribute("lista", reservaServicio.findAll());    
+	    model.addAttribute("lista", reservaServicio.findAll());
+	    if(reservaServicio.findAll() == null) {
+			throw new ExcepcionReservaVacia();
+		}
 	    return "reserva";
 	}
 	
@@ -117,7 +121,7 @@ public class AdminController {
 
 		r.setUsuario(currentUser);
 		reservaServicio.guardarReservaConUsuario(r);
-		return "redirect:/admin/reservas";
+		return "redirect:/reserva/";
 	}
 	
 	@GetMapping("/editarReserva/{id}")
@@ -129,7 +133,7 @@ public class AdminController {
 			model.addAttribute("reserva", rEditar);
 			return "reservaAdmin";
 		} else {
-			return "redirect:/admin/reservas";
+			return "redirect:/reserva/";
 		}
 
 	}
@@ -137,13 +141,13 @@ public class AdminController {
 	@PostMapping("/editarReserva/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("reserva") Reserva r) {
 		reservaServicio.edit(r);
-		return "redirect:/admin/reservas";
+		return "redirect:/reserva/";
 	}
 	
 	@GetMapping("/borrarReserva/{id}")
 	public String borrarR(@PathVariable("id") long id) {
 		reservaServicio.delete(id);
-		return "redirect:/admin/reservas";
+		return "redirect:/reserva/";
 	}
 
 }
