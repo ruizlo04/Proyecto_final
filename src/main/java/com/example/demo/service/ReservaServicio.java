@@ -28,16 +28,16 @@ public class ReservaServicio {
 		return reservaRepository.save(r); 
 		}
 	
-	public Reserva edit(Reserva r) { return reservaRepository.save(r); }
+	public Reserva edit(Reserva r) { return repo2.save(r); }
 
-	public void delete(Reserva r) { reservaRepository.delete(r); }
+	public void delete(Reserva r) { repo2.delete(r); }
 	
-	public void delete(long id) { reservaRepository.deleteById(id); }
+	public void delete(long id) { repo2.deleteById(id); }
 	
-	public List<Reserva> findAll() { return reservaRepository.findAll(); }
+	public List<Reserva> findAll() { return repo2.findAll(); }
 	
 	public Reserva findById(long id) {
-		return reservaRepository.findById(id).orElse(null);
+		return repo2.findById(id).orElse(null);
 	}
 	
 	public List<Reserva> findByNombre(Long idCurrentUser) {

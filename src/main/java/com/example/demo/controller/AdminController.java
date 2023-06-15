@@ -97,57 +97,47 @@ public class AdminController {
 
 	@GetMapping("/nueva")
 	public String mostrarFormRes(Model model) {
+		model.addAttribute("usuarios",usuarioServicio.findAll());
 		model.addAttribute("menus", menuServicio.findAll());
 		model.addAttribute("reserva", new Reserva());
 
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String currentUserName = authentication.getName();
-
-		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
-		List<Reserva> listaReservas = new ArrayList<>();
-		listaReservas = reservaServicio.findByNombre(currentUser.getId());
-
-		System.out.println(listaReservas.size());
-		model.addAttribute("lista", listaReservas);
 		return "reservaAdmin";
 	}
 	
 	@PostMapping("/nueva/submit")
 	public String procesarFormRes(@ModelAttribute("reserva") Reserva r, @ModelAttribute("usuario") Usuario u) {
 
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String currentUserName = authentication.getName();
-		Usuario currentUser = usuarioServicio.findByUsername(currentUserName);
-
-		r.setUsuario(currentUser);
+		r.setUsuario(r.getUsuario());
 		reservaServicio.guardarReservaConUsuario(r);
-		return "redirect:/reserva/";
+		return "redirect:/admin/reservas";
 	}
 	
-	@GetMapping("/editarReserva/{id}")
+	@GetMapping("/reservas/editarReserva/{id}")
 	public String mostrarFormularioEdicionReserva(@PathVariable("id") long cod_reserva, Model model) {
-
+		model.addAttribute("usuarios",usuarioServicio.findAll());
+		model.addAttribute("menus", menuServicio.findAll());
 		Reserva rEditar = reservaServicio.findById(cod_reserva);
-
 		if (rEditar != null) {
 			model.addAttribute("reserva", rEditar);
 			return "reservaAdmin";
 		} else {
-			return "redirect:/reserva/";
+			return "redirect:/admin/reservas/";
 		}
 
 	}
 
-	@PostMapping("/editarReserva/submit")
+	@PostMapping("/reservas/editarReserva/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("reserva") Reserva r) {
+		
 		reservaServicio.edit(r);
-		return "redirect:/reserva/";
+		return "redirect:/admin/reservas/";
 	}
 	
-	@GetMapping("/borrarReserva/{id}")
-	public String borrarR(@PathVariable("id") long id) {
-		reservaServicio.delete(id);
-		return "redirect:/reserva/";
+	@GetMapping("/reservas/borrarReserva/{cod_reserva}")
+	public String borrarR(@PathVariable("cod_reserva") long cod_reserva) {
+		System.out.println(cod_reserva);
+		reservaServicio.delete(cod_reserva);
+		return "redirect:/admin/reservas/";
 	}
 
 }

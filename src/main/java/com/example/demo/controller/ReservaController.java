@@ -42,7 +42,7 @@ public class ReservaController {
 
 	@GetMapping("/editar/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long cod_reserva, Model model) {
-
+		model.addAttribute("menus", menuServicio.findAll());
 		Reserva rEditar = reservaServicio.findById(cod_reserva);
 
 		if (rEditar != null) {

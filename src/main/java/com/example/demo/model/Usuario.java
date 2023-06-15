@@ -81,6 +81,8 @@ public class Usuario implements UserDetails{
 		return true;
 	}
 	
-	
+	public String getEnumSeletor() {
+		return this.username; 
+	}
 	
 }

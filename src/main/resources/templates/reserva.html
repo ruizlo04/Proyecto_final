@@ -39,7 +39,7 @@
 									class="ms-1 d-none d-sm-inline">Camareros</span></a>
 						</li>
 						<li>
-							<a href="reserva.html" th:href="@{/reserva/}" class="nav-link px-0 align-middle ">
+							<a href="reserva.html" th:href="@{/admin/reservas}" class="nav-link px-0 align-middle ">
 								<i class="fs-4 bi-bootstrap"></i> <span
 									class="ms-1 d-none d-sm-inline">Reserva</span></a>
 						</li>
@@ -55,7 +55,7 @@
 					<thead>
 						<tr>
 							<th>Id</th>
-							<th style="visibility:collapse; display:none;">Username</th>
+							<th>Username</th>
 							<th>Fecha</th>
 							<th>Tipo</th>
 							<th>Menú</th>
@@ -68,8 +68,7 @@
 					<tbody>
 						<tr th:each="reserva : ${lista}">
 							<td th:text="${reserva.cod_reserva}">1</td>
-							<td style="visibility:collapse; display:none;" th:text="${reserva.usuario.username}">
-								Username</td>
+							<td th:text="${reserva.usuario.username}">Username</td>
 							<td th:text="${reserva.fecha}">Fecha</td>
 							<td th:text="${reserva.tipo_evento}">Tipo evento</td>
 							<td th:text="${reserva.menu.nombre}">Menú</td>
@@ -78,10 +77,10 @@
 							<td th:text="${#numbers.formatDecimal(reserva.calcularTotal(), 1, 2)}">Total</td>
 
 							<td>
-								<a href="#" th:href="@{/admin/editarReserva/(id=${reserva.cod_reserva})}"><img
+								<a href="#" th:href="@{/admin/reservas/editarReserva/{id}(id=${reserva.cod_reserva})}"><img
 										class="navbar-brand" href="javascript:void(0)" src="/img/edit.png" alt="Editar"
 										width="5%"></a> |
-								<a href="#" th:href="@{/admin/borrarReserva/{id}(id=${reserva.cod_reserva})}"><img
+								<a href="#" th:href="@{/admin/reservas/borrarReserva/{cod_reserva}(cod_reserva=${reserva.cod_reserva})}"><img
 										class="navbar-brand" href="javascript:void(0)" src="/img/borrar.png"
 										alt="Borrar" width="5%"></a>
 							</td>
