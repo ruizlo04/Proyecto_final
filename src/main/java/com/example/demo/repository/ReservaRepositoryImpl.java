@@ -19,6 +19,13 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.demo.model.Reserva;
 import com.example.demo.model.Usuario;
 
+/**
+ * Esta clase es una implementación de la interfaz ReservaRepository. El método guardarReservaConUsuario
+ * persiste un objeto de tipo Reserva y su objeto de tipo Usuario asociado en la base de datos. 
+ * También se incluyen métodos para buscar y eliminar objetos de tipo Reserva.
+ * @author Admin
+ *
+ */
 @Repository
 @Transactional
 @Primary

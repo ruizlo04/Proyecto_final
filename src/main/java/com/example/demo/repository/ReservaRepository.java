@@ -15,7 +15,5 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long> {
     
     void guardarReservaConUsuario(Reserva reserva);
     
-//    @Query("select r from Reserva r where r.id = ?1")
-//    @Query(value = "SELECT * FROM RESERVA WHERE ID = ?0", nativeQuery = true)
     List<Reserva> findByUsuario(Long idCurrentUser);
 }
